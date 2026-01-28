@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'ArtifaktElement-Regular';
+	src: url('artifaktelement-regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('artifaktelement-regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('artifaktelement-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('artifaktelement-regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('artifaktelement-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('artifaktelement-regular.svg#artifaktelement-regular') format('svg'); /* Chrome < 4, Legacy iOS */
+}

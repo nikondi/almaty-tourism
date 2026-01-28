@@ -1,0 +1,10 @@
+.idea
+
+vendor
+node_modules
+
+dist
+
+.vite
+
+public/hot

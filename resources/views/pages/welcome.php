@@ -47,3 +47,59 @@
         </div>
     </div>
 </section>
+
+<section class="slider-wrapper platform-section">
+    <div class="container">
+        <div class="platform-wrapper">
+            <img src="/assets/img/welcome/platform.png" class="platform-image" alt=""/>
+            <div class="platform-text">
+                <h2 class="platform-title">Платформа для бизнеса в Алматы</h2>
+                <div class="platform-description">Наша платформа помогает компаниям, организациям и частным клиентам
+                    быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.
+                </div>
+            </div>
+        </div>
+        <div class="platform-slider">
+            <?php
+            $slides = [
+                    ['link' => '#', 'title' => 'Достопримечательно<wbr>сти и культурное наследие', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                    ['link' => '#', 'title' => 'MICE‑площадки и инфраструктура событий', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                    ['link' => '#', 'title' => 'Размещение', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                    ['link' => '#', 'title' => 'Питание и кейтеринг', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                    ['link' => '#', 'title' => 'Активности, развлечения и оздоровление', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                    ['link' => '#', 'title' => 'Размещение', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+            ];
+            ?>
+            <div class="platform-slides swiper">
+                <div class="swiper-wrapper">
+                    <?php foreach ($slides as $slide): ?>
+                        <div class="swiper-slide">
+                            <a href="<?= $slide['link'] ?>" class="platform-card">
+                                <div class="platform-card__arrow">
+                                    <div class="platform-card__arrow-inner">
+                                        <img src="/assets/img/icons/light/arrow-up-right.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="platform-card__title"><?= $slide['title'] ?></div>
+                                <div class="platform-card__description"><?= $slide['description'] ?></div>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="platform-nav">
+                <button class="platform-nav-arrow platform-nav-arrow--prev">
+                    <img src="/assets/img/icons/light/chevron-left.svg" alt="">
+                </button>
+                <div class="platform-nav-indicator">
+                    <span class="platform-nav-indicator__current">01</span>
+                    <span>/</span>
+                    <span class="platform-nav-indicator__total">06</span>
+                </div>
+                <button class="platform-nav-arrow platform-nav-arrow--next">
+                    <img src="/assets/img/icons/light/chevron-right.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -8,6 +8,7 @@ class WelcomeController extends Controller
     {
         return $this->render("pages/welcome", [
             'title' => 'Главная',
+            'lightHeader' => true,
         ]);
     }
 }

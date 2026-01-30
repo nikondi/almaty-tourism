@@ -632,6 +632,8 @@ body {
   height: 100%;
   padding: 16px;
   border-radius: 8px;
+  width: 270px;
+  margin: 0 auto;
 
   &__title {
     font-weight: 700;
@@ -695,7 +697,6 @@ body {
 
   .swiper-slide {
     height: auto;
-    width: 270px;
     transition: {
       duration: .3s;
       property: opacity;
@@ -747,6 +748,38 @@ body {
   &__total {
     font-size: 14px;
     line-height: 1.4;
+  }
+}
+
+@media (max-width: 1143px) {
+  .platform-wrapper {
+    flex-direction: column;
+    row-gap: 33px;
+  }
+  .platform-text {
+    padding-bottom: 48px;
+    padding-left: 0;
+  }
+  .platform-image {
+    height: 582px;
+  }
+  .platform-slider {
+    padding-top: 0;
+  }
+  .platform-description {
+    margin-top: 24px;
+  }
+  .platform-slides.swiper {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+  }
+  .platform-nav {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
   }
 }
 

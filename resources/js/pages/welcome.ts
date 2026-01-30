@@ -54,12 +54,17 @@ function initPlatformSlider() {
   new Swiper(slider, {
     modules: [Navigation],
     spaceBetween: 20,
-    slidesPerView: "auto",
-    centeredSlides: false,
-    slidesOffsetAfter: 2 * 270 + 40,
+    slidesPerView: 1,
     navigation: {
       prevEl: prevButton,
       nextEl: nextButton
+    },
+    breakpoints: {
+      1143: {
+        slidesPerView: "auto",
+        centeredSlides: false,
+        slidesOffsetAfter: 2 * 270 + 40,
+      }
     },
     on: {
       slideChange: handleChange,

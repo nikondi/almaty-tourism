@@ -1030,10 +1030,12 @@ body {
         .welcome-story__text {
           padding: 8px;
         }
+
         .welcome-story__link {
           right: 8px;
           bottom: 6px;
         }
+
         .welcome-story__description {
           display: none;
         }
@@ -1109,6 +1111,7 @@ body {
       transition: .2s width;
       background-color: currentColor;
     }
+
     &:hover:after {
       width: 0;
     }
@@ -1119,11 +1122,132 @@ body {
   margin-top: 40px;
   text-align: center;
 }
+
 @media (max-width: 1143px) {
   .welcome-story__description {
     display: none;
   }
   .welcome-story__text {
     min-height: 150px;
+  }
+}
+
+.welcome-faq-section {
+  margin-top: 80px;
+  padding-top: 80px;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+
+  .section-title {
+    max-width: 450px;
+  }
+}
+
+.welcome-faq-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-faq-text {
+  max-width: 465px;
+}
+
+.welcome-faq-tag {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+
+  margin-bottom: 24px;
+
+  border-radius: 16px;
+  padding: 7px 16px 4px;
+  background-color: $color-primary;
+  display: inline-block;
+  color: #ffffff;
+}
+
+.welcome-faq-description {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.welcome-faq-list {
+  width: 100%;
+  max-width: 560px;
+}
+
+.faq-item {
+  padding: 32px 0 0;
+  border-top: 1px solid #23232333;
+  position: relative;
+  cursor: pointer;
+
+  &__question {
+    color: #212844;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+  }
+  &.active {
+    .faq-item-icon__rotate {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.faq-item-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  &__rotate {
+    transform-origin: 50% 50%;
+    transition: .3s transform;
+  }
+}
+
+.faq-item-answer {
+  font-weight: 200;
+  overflow: hidden;
+  max-height: 0;
+  cursor: text;
+  transition: .4s max-height;
+
+  b {
+    font-weight: 500;
+  }
+  i {
+    font-style: italic;
+  }
+
+  &__inner {
+    padding-top: 24px;
+  }
+}
+
+.welcome-faq-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+@media (max-width: 1143px) {
+  .welcome-faq-wrapper {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .faq-item {
+    padding-top: 24px;
+
+    &__question {
+      font-size: 16px;
+      max-width: 225px;
+    }
+  }
+  .welcome-faq-list {
+    row-gap: 24px;
   }
 }

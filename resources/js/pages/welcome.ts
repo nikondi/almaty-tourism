@@ -5,6 +5,7 @@ import {Navigation} from "swiper/modules";
 export default function welcomePage() {
   initWelcomeSlider();
   initPlatformSlider();
+  initAccordion();
 }
 
 function initWelcomeSlider() {
@@ -65,4 +66,31 @@ function initPlatformSlider() {
       init: handleChange
     }
   })
+}
+
+function initAccordion() {
+  document.querySelectorAll<HTMLElement>('.faq-item').forEach((elem) => {
+    const answer = elem.querySelector<HTMLElement>('.faq-item-answer');
+    elem.addEventListener('click', function () {
+      answer.style.overflow = 'hidden';
+      if (elem.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.maxHeight = 0 + 'px';
+        elem.classList.remove('active');
+      } else {
+        answer.style.maxHeight = 0 + 'px';
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        elem.classList.add('active');
+      }
+    });
+
+    answer.addEventListener('transitionend', function () {
+      if (elem.classList.contains('active'))
+        answer.style.overflow = null;
+    });
+
+    answer.addEventListener('click', function (e) {
+      e.stopPropagation();
+    })
+  });
 }

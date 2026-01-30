@@ -1,6 +1,7 @@
 import "swiper/css";
+import "swiper/css/effect-fade";
 import Swiper from "swiper";
-import {Navigation} from "swiper/modules";
+import {Autoplay, EffectFade, Navigation, Thumbs} from "swiper/modules";
 
 export default function welcomePage() {
   initWelcomeSlider();
@@ -9,25 +10,39 @@ export default function welcomePage() {
 }
 
 function initWelcomeSlider() {
-  const wrapper = document.querySelector<HTMLElement>('.welcome-first-steps-slider');
-  if (!wrapper)
+  const thumbsElem = document.querySelector<HTMLElement>('.welcome-first-steps-slider');
+  const background = document.querySelector<HTMLElement>('.welcome-first-background');
+  if (!background)
     return;
 
-  let swiper: Swiper = null;
-  const media = window.matchMedia('(max-width: 1143px)');
 
-  const checkMedia = () => {
-    if (media.matches) {
-      swiper = new Swiper(wrapper, {
-        spaceBetween: 20
-      })
-    } else {
-      swiper?.destroy();
+  const thumbs = new Swiper(thumbsElem, {
+    spaceBetween: 20,
+    breakpoints: {
+      1144: {
+        slidesPerView: 4
+      }
     }
-  }
+  });
 
-  checkMedia();
-  media.addEventListener('change', checkMedia);
+  const swiper = new Swiper(background, {
+    modules: [Autoplay, Thumbs, EffectFade],
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 6000
+    },
+    thumbs: {
+      swiper: thumbs,
+      slideThumbActiveClass: "welcome-first-step--active"
+    }
+  });
+
+  thumbs.on('slideChange', function (sw) {
+    swiper.slideTo(sw.activeIndex);
+  });
 }
 
 function initPlatformSlider() {

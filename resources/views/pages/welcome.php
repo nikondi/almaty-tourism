@@ -1,7 +1,15 @@
-<!-- TODO: слайдер -->
 <section class="wide-section welcome-first">
+    <div class="welcome-first-background swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/assets/img/welcome/first-background.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/welcome/platform.png" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/welcome/guides-mobile.png" alt=""></div>
+            <div class="swiper-slide"><img src="/assets/img/welcome/support.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="welcome-first-black"></div>
+
     <div class="container">
-        <div class="welcome-first-black"></div>
         <div class="welcome-first-inner">
             <h1 class="welcome-first-title">Организуйте мероприятие в Алматы быстро и удобно</h1>
             <div class="welcome-first-description">
@@ -329,13 +337,15 @@
                 <div class="faq-item">
                     <div class="faq-item__question"><?= $question['question'] ?></div>
                     <svg width="24" height="24" viewBox="0 0 24 24" class="faq-item-icon">
-                        <path d="M6 12H18" stroke="#232323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 18V6" stroke="#232323" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="faq-item-icon__rotate"/>
+                        <path d="M6 12H18" stroke="#232323" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M12 18V6" stroke="#232323" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" class="faq-item-icon__rotate"/>
                     </svg>
 
                     <div class="faq-item-answer">
                         <div class="faq-item-answer__inner"><?= $question['answer'] ?></div>
-                        </div>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>

@@ -253,3 +253,53 @@
     </div>
 </section>
 
+<section class="welcome-stories-section">
+    <div class="container">
+        <h2 class="section-title">Истории успеха</h2>
+        <div class="welcome-stories-tags">
+            <?php
+            $tags = [
+                    ['name' => 'Гиды и Туроператоры', 'link' => '#'],
+                    ['name' => 'Кейтеринг и питание', 'link' => '#'],
+                    ['name' => 'Оборудование и техника', 'link' => '#'],
+                    ['name' => 'Ведущие и артисты', 'link' => '#'],
+                    ['name' => 'Переводчики', 'link' => '#'],
+                    ['name' => 'Транспорт и логистика', 'link' => '#'],
+                    ['name' => 'Декор и оформление', 'link' => '#'],
+            ];
+            foreach ($tags as $tag): ?>
+                <a href="<?= $tag['link'] ?>"><?= $tag['name'] ?></a>
+            <?php endforeach; ?>
+        </div>
+        <div class="welcome-stories-grid">
+            <?php
+            $stories = [
+                    ['title' => 'Конференция для IT-компании', 'description' => '', 'img' => '/assets/img/welcome/stories/1.jpg', 'link' => '#'],
+                    ['title' => 'Тимбилдинг на природе', 'description' => 'Выездное мероприятие для 80 сотрудников с транспортом, активностями и фуршетом.', 'img' => '/assets/img/welcome/stories/2.jpg', 'link' => '#'],
+                    ['title' => 'Презентация нового продукта', 'description' => '', 'img' => '/assets/img/welcome/stories/3.jpg', 'link' => '#'],
+                    ['title' => 'Международная конференция по энергетике', 'description' => '', 'img' => '/assets/img/welcome/stories/4.jpg', 'link' => '#'],
+                    ['title' => 'Корпоративный банкет для банка', 'description' => '', 'img' => '/assets/img/welcome/stories/5.jpg', 'link' => '#'],
+                    ['title' => 'Гастрономический фестиваль', 'description' => '', 'img' => '/assets/img/welcome/stories/6.jpg', 'link' => '#'],
+                    ['title' => 'Культурный вечер для делегации', 'description' => 'Программа с гидами, переводчиками, ужином в национальном стиле и выступлениями артистов.', 'img' => '/assets/img/welcome/stories/7.jpg', 'link' => '#'],
+                    ['title' => 'Тренинг для сотрудников холдинга', 'description' => '', 'img' => '/assets/img/welcome/stories/8.jpg', 'link' => '#'],
+                    ['title' => 'Международный медицинский форум', 'description' => '', 'img' => '/assets/img/welcome/stories/9.jpg', 'link' => '#'],
+            ];
+            foreach ($stories as $story): ?>
+                <div class="welcome-story">
+                    <img src="<?= $story['img']; ?>" alt="" class="welcome-story__img">
+                    <div class="welcome-story__text">
+                        <div class="welcome-story__title"><?= $story['title']; ?></div>
+                        <div class="welcome-story__description"><?= $story['description']; ?></div>
+                        <a href="<?= $story['link'] ?>" class="welcome-story__link">Читать</a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="welcome-stories-button">
+            <a href="#" class="btn btn-secondary">
+                <span>Смотреть все</span>
+                <img src="/assets/img/icons/arrow-right.svg" alt="" class="btn-icon">
+            </a>
+        </div>
+    </div>
+</section>

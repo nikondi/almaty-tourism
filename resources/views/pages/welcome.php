@@ -1,3 +1,4 @@
+<!-- TODO: слайдер -->
 <section class="wide-section welcome-first">
     <div class="container">
         <div class="welcome-first-black"></div>
@@ -205,3 +206,50 @@
         </div>
     </div>
 </section>
+
+<section class="welcome-support-section">
+    <div class="container">
+        <div class="welcome-support-wrap">
+            <div class="welcome-support-text">
+                <h2 class="welcome-support-title">Поддержка MICE мероприятий</h2>
+                <div class="welcome-support-description">«Almaty Tourism Bureau оказывает поддержку в проведении
+                    международных конференций, форумов, саммитов и других деловых мероприятий. Заполните форму ниже,
+                    чтобы мы могли рассмотреть вашу заявку и предложить оптимальный формат сотрудничества.»
+                </div>
+            </div>
+            <div class="welcome-support-button">
+                <!-- TODO: форма -->
+                <button type="button" class="btn btn-secondary btn-secondary--white">
+                    Заполнить заявку
+                </button>
+            </div>
+        </div>
+        <ul class="welcome-support-list">
+            <?php
+            $supports = [
+                    ['icon' => 'food', 'name' => 'Питание', 'link' => '#'],
+                    ['icon' => 'microphone', 'name' => 'Техническое обеспечение', 'link' => '#'],
+                    ['icon' => 'map', 'name' => 'Экскурсия', 'link' => '#'],
+                    ['icon' => 'hotel', 'name' => 'Проживание', 'link' => '#'],
+                    ['icon' => 'masks', 'name' => 'Культурная программа', 'link' => '#'],
+                    ['icon' => 'bag', 'name' => 'Сувениры', 'link' => '#'],
+                    ['icon' => 'tickets', 'name' => 'Перелёт', 'link' => '#'],
+                    ['icon' => 'bus', 'name' => 'Трансфер', 'link' => '#'],
+                    ['icon' => 'peoples', 'name' => 'Конференц-зал', 'link' => '#'],
+            ];
+            foreach ($supports as $support): ?>
+
+                <li>
+                    <a href="<?= $support['link'] ?>">
+                        <svg width="32" height="32">
+                            <use xlink:href="/assets/img/welcome/support.svg#<?= $support['icon'] ?>"
+                        </svg>
+                        <span><?= $support['name'] ?></span>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <img src="/assets/img/welcome/support.jpg" class="welcome-support-image" alt="">
+    </div>
+</section>
+

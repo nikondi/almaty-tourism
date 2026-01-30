@@ -47,7 +47,7 @@
         </div>
     </div>
 </section>
-
+<!-- TODO: mobile -->
 <section class="slider-wrapper platform-section">
     <div class="container">
         <div class="platform-wrapper">
@@ -144,6 +144,38 @@
         <div class="actual-requests-button-wrapper">
             <a href="#" class="btn btn-secondary">
                 <span>Смотреть все</span>
+                <img src="/assets/img/icons/arrow-right.svg" alt="" class="btn-icon">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="welcome-photobank-section">
+    <div class="container">
+        <h3 class="section-title section-title--right">Фото и видео банк</h3>
+        <?php
+        $images = [
+                '/assets/img/welcome/photo-bank/1.jpg',
+                '/assets/img/welcome/photo-bank/6.jpg',
+                '/assets/img/welcome/photo-bank/7.jpg',
+                '/assets/img/welcome/photo-bank/4.jpg',
+                '/assets/img/welcome/photo-bank/9.jpg',
+                '/assets/img/welcome/photo-bank/2.jpg',
+                '/assets/img/welcome/photo-bank/3.jpg',
+                '/assets/img/welcome/photo-bank/8.jpg',
+                '/assets/img/welcome/photo-bank/5.jpg',
+        ];
+        ?>
+        <div class="welcome-photobank-grid">
+            <?php foreach ($images as $image): ?>
+                <a href="<?= $image ?>" data-fancybox="welcome-bank">
+                    <img src="<?= $image ?>" alt="">
+                </a>
+            <?php endforeach; ?>
+        </div>
+        <div class="welcome-photobank-button-wrapper">
+            <a href="#" class="btn btn-secondary">
+                <span>Смотреть фото</span>
                 <img src="/assets/img/icons/arrow-right.svg" alt="" class="btn-icon">
             </a>
         </div>

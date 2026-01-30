@@ -13,6 +13,7 @@
     "vite-plugin-full-reload": "^1.2.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.1.10",
     "axios": "^1.13.4",
     "swiper": "^11.2.8"
   }

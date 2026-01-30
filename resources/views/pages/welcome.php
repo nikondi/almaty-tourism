@@ -181,3 +181,27 @@
         </div>
     </div>
 </section>
+
+<section class="welcome-guides-section">
+    <div class="container">
+        <div class="welcome-guides-tags">
+            <a href="#">Гиды</a>
+            <a href="#">Туроператоры</a>
+            <a href="#">Переводчики</a>
+        </div>
+        <div class="welcome-guides-title">
+            Пользуются доверием профессионалов<br/>
+            <span>из различных отраслей туризма</span>
+        </div>
+        <div class="welcome-guides-description">
+            Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и
+            подрядчиков для деловых и частных мероприятий.
+        </div>
+        <div class="welcome-guides-button">
+            <a href="#" class="btn btn-secondary">
+                <span>Смотреть всех</span>
+                <img src="/assets/img/icons/arrow-right.svg" alt="" class="btn-icon">
+            </a>
+        </div>
+    </div>
+</section>

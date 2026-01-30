@@ -31,6 +31,7 @@ console_print('==== CLEAR FILES ====', 'yellow');
 $to_clean = [
     DIST_PATH . '/resources',
     DIST_PATH . '/index.php',
+    DIST_PATH . '/hot',
     BASE_PATH . '/.vite',
 ];
 foreach ($to_clean as $file) {

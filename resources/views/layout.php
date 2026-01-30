@@ -13,9 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
     <link href="/assets/fonts/artifaktelement/stylesheet.css" rel="stylesheet">
-
-    <?php // TODO: Remove on production ?>
-    <?= vite('resources/css/app.scss') ?>
 </head>
 <body>
 <?php include 'partials/header.php'; ?>
@@ -28,7 +25,9 @@
 
 
 <?php // TODO: Remove on production ?>
-<?= vite('resources/js/app.ts') ?>
+<!-- vite scripts for develop -->
+<?= vite(['resources/js/app.ts', 'resources/css/app.scss']) ?>
+<!-- vite scripts for develop -->
 
 </body>
 </html>

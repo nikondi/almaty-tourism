@@ -56,7 +56,7 @@
         </div>
     </div>
 </section>
-<!-- TODO: mobile -->
+
 <section class="slider-wrapper platform-section">
     <div class="container">
         <div class="platform-wrapper">

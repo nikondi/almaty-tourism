@@ -118,40 +118,21 @@
         <h3 class="section-title">Актуальные запросы</h3>
         <?php
         $actual_requests = [
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '#', 'title' => 'Конференция на 120 человек', 'description' => 'Ищу современный зал с техническим оснащением и питанием для проведения двухдневной конференции.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '#', 'title' => 'Корпоратив для IT-компании', 'description' => 'Хочу организовать новогодний корпоратив с ведущим и банкетом в уютной атмосфере для 100 гостей.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '#', 'title' => 'Тренинг для сотрудников', 'description' => 'Необходим небольшой зал с переводчиком и техникой для проведения двухдневного тренинга в октябре.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '#', 'title' => 'Тимбилдинг за городом', 'description' => 'Компания планирует выездной тимбилдинг с играми, питанием и транспортом для коллектива из 60 человек.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '#', 'title' => 'Презентация нового продукта', 'description' => 'Бизнес запускает новый продукт и хочет провести яркое мероприятие с презентацией, сценой и видеосъёмкой.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '#', 'title' => 'Международный форум', 'description' => 'Крупный заказчик готовит трёхдневный форум для зарубежных делегаций с проживанием, питанием и синхронным переводом.'],
+                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Конференция на 120 человек', 'description' => 'Ищу современный зал с техническим оснащением и питанием для проведения двухдневной конференции.'],
+                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Корпоратив для IT-компании', 'description' => 'Хочу организовать новогодний корпоратив с ведущим и банкетом в уютной атмосфере для 100 гостей.'],
+                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тренинг для сотрудников', 'description' => 'Необходим небольшой зал с переводчиком и техникой для проведения двухдневного тренинга в октябре.'],
+                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тимбилдинг за городом', 'description' => 'Компания планирует выездной тимбилдинг с играми, питанием и транспортом для коллектива из 60 человек.'],
+                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Презентация нового продукта', 'description' => 'Бизнес запускает новый продукт и хочет провести яркое мероприятие с презентацией, сценой и видеосъёмкой.'],
+                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Международный форум', 'description' => 'Крупный заказчик готовит трёхдневный форум для зарубежных делегаций с проживанием, питанием и синхронным переводом.'],
         ];
         ?>
         <div class="actual-requests-grid">
-            <?php foreach ($actual_requests as $actual_request): ?>
-                <a href="<?= $actual_request['link'] ?>" class="actual-request">
-                    <img src="<?= $actual_request['image'] ?>" alt="" class="actual-request-image">
-                    <div class="actual-request-inner">
-                        <div class="actual-request-top">
-                            <div class="actual-request-date">
-                                <img src="/assets/img/icons/light/calendar.svg" alt="">
-                                <span><?= $actual_request['date'] ?></span>
-                            </div>
-                        </div>
-                        <div class="actual-request-bottom">
-                            <div class="actual-request-text">
-                                <div class="actual-request-title"><?= $actual_request['title'] ?></div>
-                                <div class="actual-request-description"><?= $actual_request['description'] ?></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="actual-request-arrow">
-                        <img src="/assets/img/icons/light/arrow-up-right.svg" alt=""/>
-                    </div>
-                </a>
+            <?php foreach ($actual_requests as $card): ?>
+                <?php include VIEW_PATH . 'components/request-card.php'; ?>
             <?php endforeach; ?>
         </div>
         <div class="actual-requests-button-wrapper">
-            <a href="#" class="btn btn-secondary">
+            <a href="/requests" class="btn btn-secondary">
                 <span>Смотреть все</span>
                 <img src="/assets/img/icons/arrow-right.svg" alt="" class="btn-icon">
             </a>
@@ -193,7 +174,7 @@
 
 <section class="welcome-guides-section">
     <div class="container">
-        <div class="welcome-guides-tags">
+        <div class="welcome-guides-tags tags">
             <a href="#">Гиды</a>
             <a href="#">Туроператоры</a>
             <a href="#">Переводчики</a>
@@ -264,7 +245,7 @@
 <section class="welcome-stories-section">
     <div class="container">
         <h2 class="section-title">Истории успеха</h2>
-        <div class="welcome-stories-tags">
+        <div class="welcome-stories-tags tags">
             <?php
             $tags = [
                     ['name' => 'Гиды и Туроператоры', 'link' => '#'],

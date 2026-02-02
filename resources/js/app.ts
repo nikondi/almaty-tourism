@@ -1,6 +1,6 @@
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-import {requestsPage, welcomePage} from "@/pages";
+import {requestPage, requestsPage, welcomePage} from "@/pages";
 import {Fancybox} from "@fancyapps/ui";
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   /* PAGES */
   welcomePage();
   requestsPage();
+  requestPage();
 });
 
 function initFancybox() {

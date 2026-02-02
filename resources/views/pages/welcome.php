@@ -71,12 +71,12 @@
         <div class="platform-slider">
             <?php
             $slides = [
-                    ['link' => '#', 'title' => 'Достопримечательно<wbr>сти и культурное наследие', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
-                    ['link' => '#', 'title' => 'MICE‑площадки и инфраструктура событий', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
-                    ['link' => '#', 'title' => 'Размещение', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
-                    ['link' => '#', 'title' => 'Питание и кейтеринг', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
-                    ['link' => '#', 'title' => 'Активности, развлечения и оздоровление', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
-                    ['link' => '#', 'title' => 'Размещение', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                ['link' => '#', 'title' => 'Достопримечательно<wbr>сти и культурное наследие', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                ['link' => '#', 'title' => 'MICE‑площадки и инфраструктура событий', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                ['link' => '#', 'title' => 'Размещение', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                ['link' => '#', 'title' => 'Питание и кейтеринг', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                ['link' => '#', 'title' => 'Активности, развлечения и оздоровление', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
+                ['link' => '#', 'title' => 'Размещение', 'description' => 'Наша платформа помогает компаниям, организациям и частным клиентам быстро находить проверенные площадки и подрядчиков для деловых и частных мероприятий.'],
             ];
             ?>
             <div class="platform-slides swiper">
@@ -118,12 +118,12 @@
         <h3 class="section-title">Актуальные запросы</h3>
         <?php
         $actual_requests = [
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Конференция на 120 человек', 'description' => 'Ищу современный зал с техническим оснащением и питанием для проведения двухдневной конференции.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Корпоратив для IT-компании', 'description' => 'Хочу организовать новогодний корпоратив с ведущим и банкетом в уютной атмосфере для 100 гостей.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тренинг для сотрудников', 'description' => 'Необходим небольшой зал с переводчиком и техникой для проведения двухдневного тренинга в октябре.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тимбилдинг за городом', 'description' => 'Компания планирует выездной тимбилдинг с играми, питанием и транспортом для коллектива из 60 человек.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Презентация нового продукта', 'description' => 'Бизнес запускает новый продукт и хочет провести яркое мероприятие с презентацией, сценой и видеосъёмкой.'],
-                ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Международный форум', 'description' => 'Крупный заказчик готовит трёхдневный форум для зарубежных делегаций с проживанием, питанием и синхронным переводом.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Конференция на 120 человек', 'description' => 'Ищу современный зал с техническим оснащением и питанием для проведения двухдневной конференции.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Корпоратив для IT-компании', 'description' => 'Хочу организовать новогодний корпоратив с ведущим и банкетом в уютной атмосфере для 100 гостей.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тренинг для сотрудников', 'description' => 'Необходим небольшой зал с переводчиком и техникой для проведения двухдневного тренинга в октябре.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тимбилдинг за городом', 'description' => 'Компания планирует выездной тимбилдинг с играми, питанием и транспортом для коллектива из 60 человек.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Презентация нового продукта', 'description' => 'Бизнес запускает новый продукт и хочет провести яркое мероприятие с презентацией, сценой и видеосъёмкой.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Международный форум', 'description' => 'Крупный заказчик готовит трёхдневный форум для зарубежных делегаций с проживанием, питанием и синхронным переводом.'],
         ];
         ?>
         <div class="actual-requests-grid">
@@ -145,15 +145,15 @@
         <h3 class="section-title section-title--right">Фото и видео банк</h3>
         <?php
         $images = [
-                '/assets/img/welcome/photo-bank/1.jpg',
-                '/assets/img/welcome/photo-bank/6.jpg',
-                '/assets/img/welcome/photo-bank/7.jpg',
-                '/assets/img/welcome/photo-bank/4.jpg',
-                '/assets/img/welcome/photo-bank/9.jpg',
-                '/assets/img/welcome/photo-bank/2.jpg',
-                '/assets/img/welcome/photo-bank/3.jpg',
-                '/assets/img/welcome/photo-bank/8.jpg',
-                '/assets/img/welcome/photo-bank/5.jpg',
+            '/assets/img/welcome/photo-bank/1.jpg',
+            '/assets/img/welcome/photo-bank/6.jpg',
+            '/assets/img/welcome/photo-bank/7.jpg',
+            '/assets/img/welcome/photo-bank/4.jpg',
+            '/assets/img/welcome/photo-bank/9.jpg',
+            '/assets/img/welcome/photo-bank/2.jpg',
+            '/assets/img/welcome/photo-bank/3.jpg',
+            '/assets/img/welcome/photo-bank/8.jpg',
+            '/assets/img/welcome/photo-bank/5.jpg',
         ];
         ?>
         <div class="welcome-photobank-grid">
@@ -175,9 +175,9 @@
 <section class="welcome-guides-section">
     <div class="container">
         <div class="welcome-guides-tags tags">
-            <a href="#">Гиды</a>
-            <a href="#">Туроператоры</a>
-            <a href="#">Переводчики</a>
+            <a href="#" class="tag">Гиды</a>
+            <a href="#" class="tag">Туроператоры</a>
+            <a href="#" class="tag">Переводчики</a>
         </div>
         <div class="welcome-guides-title">
             Пользуются доверием профессионалов<br/>
@@ -216,15 +216,15 @@
         <ul class="welcome-support-list">
             <?php
             $supports = [
-                    ['icon' => 'food', 'name' => 'Питание', 'link' => '#'],
-                    ['icon' => 'microphone', 'name' => 'Техническое обеспечение', 'link' => '#'],
-                    ['icon' => 'map', 'name' => 'Экскурсия', 'link' => '#'],
-                    ['icon' => 'hotel', 'name' => 'Проживание', 'link' => '#'],
-                    ['icon' => 'masks', 'name' => 'Культурная программа', 'link' => '#'],
-                    ['icon' => 'bag', 'name' => 'Сувениры', 'link' => '#'],
-                    ['icon' => 'tickets', 'name' => 'Перелёт', 'link' => '#'],
-                    ['icon' => 'bus', 'name' => 'Трансфер', 'link' => '#'],
-                    ['icon' => 'peoples', 'name' => 'Конференц-зал', 'link' => '#'],
+                ['icon' => 'food', 'name' => 'Питание', 'link' => '#'],
+                ['icon' => 'microphone', 'name' => 'Техническое обеспечение', 'link' => '#'],
+                ['icon' => 'map', 'name' => 'Экскурсия', 'link' => '#'],
+                ['icon' => 'hotel', 'name' => 'Проживание', 'link' => '#'],
+                ['icon' => 'masks', 'name' => 'Культурная программа', 'link' => '#'],
+                ['icon' => 'bag', 'name' => 'Сувениры', 'link' => '#'],
+                ['icon' => 'tickets', 'name' => 'Перелёт', 'link' => '#'],
+                ['icon' => 'bus', 'name' => 'Трансфер', 'link' => '#'],
+                ['icon' => 'peoples', 'name' => 'Конференц-зал', 'link' => '#'],
             ];
             foreach ($supports as $support): ?>
 
@@ -248,30 +248,30 @@
         <div class="welcome-stories-tags tags">
             <?php
             $tags = [
-                    ['name' => 'Гиды и Туроператоры', 'link' => '#'],
-                    ['name' => 'Кейтеринг и питание', 'link' => '#'],
-                    ['name' => 'Оборудование и техника', 'link' => '#'],
-                    ['name' => 'Ведущие и артисты', 'link' => '#'],
-                    ['name' => 'Переводчики', 'link' => '#'],
-                    ['name' => 'Транспорт и логистика', 'link' => '#'],
-                    ['name' => 'Декор и оформление', 'link' => '#'],
+                ['name' => 'Гиды и Туроператоры', 'link' => '#'],
+                ['name' => 'Кейтеринг и питание', 'link' => '#'],
+                ['name' => 'Оборудование и техника', 'link' => '#'],
+                ['name' => 'Ведущие и артисты', 'link' => '#'],
+                ['name' => 'Переводчики', 'link' => '#'],
+                ['name' => 'Транспорт и логистика', 'link' => '#'],
+                ['name' => 'Декор и оформление', 'link' => '#'],
             ];
             foreach ($tags as $tag): ?>
-                <a href="<?= $tag['link'] ?>"><?= $tag['name'] ?></a>
+                <a href="<?= $tag['link'] ?>" class="tag"><?= $tag['name'] ?></a>
             <?php endforeach; ?>
         </div>
         <div class="welcome-stories-grid">
             <?php
             $stories = [
-                    ['title' => 'Конференция для IT-компании', 'description' => '', 'img' => '/assets/img/welcome/stories/1.jpg', 'link' => '#'],
-                    ['title' => 'Тимбилдинг на природе', 'description' => 'Выездное мероприятие для 80 сотрудников с транспортом, активностями и фуршетом.', 'img' => '/assets/img/welcome/stories/2.jpg', 'link' => '#'],
-                    ['title' => 'Презентация нового продукта', 'description' => '', 'img' => '/assets/img/welcome/stories/3.jpg', 'link' => '#'],
-                    ['title' => 'Международная конференция по энергетике', 'description' => '', 'img' => '/assets/img/welcome/stories/4.jpg', 'link' => '#'],
-                    ['title' => 'Корпоративный банкет для банка', 'description' => '', 'img' => '/assets/img/welcome/stories/5.jpg', 'link' => '#'],
-                    ['title' => 'Гастрономический фестиваль', 'description' => '', 'img' => '/assets/img/welcome/stories/6.jpg', 'link' => '#'],
-                    ['title' => 'Культурный вечер для делегации', 'description' => 'Программа с гидами, переводчиками, ужином в национальном стиле и выступлениями артистов.', 'img' => '/assets/img/welcome/stories/7.jpg', 'link' => '#'],
-                    ['title' => 'Тренинг для сотрудников холдинга', 'description' => '', 'img' => '/assets/img/welcome/stories/8.jpg', 'link' => '#'],
-                    ['title' => 'Международный медицинский форум', 'description' => '', 'img' => '/assets/img/welcome/stories/9.jpg', 'link' => '#'],
+                ['title' => 'Конференция для IT-компании', 'description' => '', 'img' => '/assets/img/welcome/stories/1.jpg', 'link' => '#'],
+                ['title' => 'Тимбилдинг на природе', 'description' => 'Выездное мероприятие для 80 сотрудников с транспортом, активностями и фуршетом.', 'img' => '/assets/img/welcome/stories/2.jpg', 'link' => '#'],
+                ['title' => 'Презентация нового продукта', 'description' => '', 'img' => '/assets/img/welcome/stories/3.jpg', 'link' => '#'],
+                ['title' => 'Международная конференция по энергетике', 'description' => '', 'img' => '/assets/img/welcome/stories/4.jpg', 'link' => '#'],
+                ['title' => 'Корпоративный банкет для банка', 'description' => '', 'img' => '/assets/img/welcome/stories/5.jpg', 'link' => '#'],
+                ['title' => 'Гастрономический фестиваль', 'description' => '', 'img' => '/assets/img/welcome/stories/6.jpg', 'link' => '#'],
+                ['title' => 'Культурный вечер для делегации', 'description' => 'Программа с гидами, переводчиками, ужином в национальном стиле и выступлениями артистов.', 'img' => '/assets/img/welcome/stories/7.jpg', 'link' => '#'],
+                ['title' => 'Тренинг для сотрудников холдинга', 'description' => '', 'img' => '/assets/img/welcome/stories/8.jpg', 'link' => '#'],
+                ['title' => 'Международный медицинский форум', 'description' => '', 'img' => '/assets/img/welcome/stories/9.jpg', 'link' => '#'],
             ];
             foreach ($stories as $story): ?>
                 <div class="welcome-story">
@@ -307,12 +307,12 @@
         <div class="welcome-faq-list">
             <?php
             $questions = [
-                    ['question' => 'Как разместить запрос на мероприятие?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
-                    ['question' => 'Сколько стоит размещение запроса?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
-                    ['question' => 'Как стать партнёром?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
-                    ['question' => 'Как работает модерация?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
-                    ['question' => 'Как я получу отклики на мой запрос?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
-                    ['question' => 'Нужно ли мне общаться только через сайт?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
+                ['question' => 'Как разместить запрос на мероприятие?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
+                ['question' => 'Сколько стоит размещение запроса?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
+                ['question' => 'Как стать партнёром?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
+                ['question' => 'Как работает модерация?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
+                ['question' => 'Как я получу отклики на мой запрос?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
+                ['question' => 'Нужно ли мне общаться только через сайт?', 'answer' => 'Ответ. Очень длинный ответ с <b>Тегами</b> и <i>Курсивом</i>'],
             ];
             foreach ($questions as $question): ?>
                 <div class="faq-item">

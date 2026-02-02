@@ -14,7 +14,7 @@ if (!isset($lightHeader))
                     <nav class="header-nav">
                         <ul>
                             <li><a href="#">Каталог</a></li>
-                            <li><a href="#">Заявки</a></li>
+                            <li><a href="/requests">Заявки</a></li>
                             <li><a href="#">Аналитика</a></li>
                             <li><a href="#">О нас</a></li>
                             <li><a href="#">Фото и видео банк</a></li>

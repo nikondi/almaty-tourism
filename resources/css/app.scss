@@ -135,6 +135,9 @@ body {
 
   &.header--light {
     color: $color-white;
+    .mobile-burger {
+      color: $color-white;
+    }
   }
 }
 
@@ -1205,19 +1208,14 @@ body {
 }
 
 .welcome-stories-grid {
-  display: grid;
-  gap: 20px;
   margin-top: 65px;
-
-
 }
 
 @media (min-width: 1144px) {
-  .welcome-stories-grid {
-    grid-template-rows: repeat(36, 10px);
-    grid-template-columns: repeat(4, 1fr);
+  .stories-grid.welcome-stories-grid {
+    .story-card {
+      grid-column: span 3;
 
-    .welcome-story {
       &:nth-child(1),
       &:nth-child(8),
       &:nth-child(5) {
@@ -1226,11 +1224,11 @@ body {
 
       &:nth-child(2) {
         grid-row: span 20;
-        grid-column: span 2;
+        grid-column: span 6;
       }
 
       &:nth-child(7) {
-        grid-column: span 2;
+        grid-column: span 6;
         grid-row: span 16;
       }
 
@@ -1242,16 +1240,16 @@ body {
       }
 
       &:not(:nth-child(2)):not(:nth-child(7)) {
-        .welcome-story__text {
+        .story-card__text {
           padding: 8px;
         }
 
-        .welcome-story__link {
+        .story-card__link {
           right: 8px;
           bottom: 6px;
         }
 
-        .welcome-story__description {
+        .story-card__description {
           display: none;
         }
       }
@@ -1259,7 +1257,7 @@ body {
   }
 }
 
-.welcome-story {
+.story-card {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1267,13 +1265,8 @@ body {
   &__img {
     height: 60%;
     border-radius: 8px 8px 0 0;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    width: 100%;
+    object-fit: cover;
   }
 
   &__text {
@@ -1292,6 +1285,8 @@ body {
     font-size: 20px;
     line-height: 130%;
     width: 100%;
+    color: inherit;
+    text-decoration: none;
   }
 
   &__description {
@@ -1331,18 +1326,19 @@ body {
       width: 0;
     }
   }
+
 }
 
-.welcome-stories-button {
+.stories-button {
   margin-top: 40px;
   text-align: center;
 }
 
 @media (max-width: 1143px) {
-  .welcome-story__description {
+  .story-card__description {
     display: none;
   }
-  .welcome-story__text {
+  .story-card__text {
     min-height: 150px;
   }
 }
@@ -2096,6 +2092,108 @@ body {
 
     &--mobile {
       display: flex;
+    }
+  }
+}
+
+.stories-index-section {
+  margin-bottom: 160px;
+}
+
+.stories-index-tags {
+  justify-content: center;
+}
+
+.stories-grid {
+  margin-top: 48px;
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 1144px) {
+  .stories-grid {
+    grid-template-rows: repeat(36, 10px);
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .stories-index-section {
+    .stories-grid {
+      grid-template-rows: repeat(36, 10px);
+      grid-template-columns: repeat(12, 1fr);
+
+      .story-card {
+        grid-column: span 4;
+        grid-row: span 12;
+
+
+        &:nth-child(1) {
+          grid-row: span 20;
+          grid-column: span 6;
+        }
+
+        &:nth-child(7) {
+          grid-column: span 6;
+          grid-row: span 16;
+        }
+
+        &:nth-child(2),
+        &:nth-child(5),
+        &:nth-child(8) {
+          grid-row: span 12;
+          grid-column: span 3;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(6),
+        &:nth-child(9) {
+          grid-row: span 9;
+          grid-column: span 3;
+        }
+
+        &:nth-child(2),
+        &:nth-child(5),
+        &:nth-child(8),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(6),
+        &:nth-child(9) {
+          .story-card__text {
+            padding: 8px;
+          }
+
+          .story-card__link {
+            right: 8px;
+            bottom: 6px;
+          }
+
+          .story-card__description {
+            display: none;
+          }
+        }
+
+        /*
+              &:nth-child(6),
+              &:nth-child(4),
+              &:nth-child(9),
+              &:nth-child(3) {
+                grid-row: span 9;
+              }
+
+              &:not(:nth-child(2)):not(:nth-child(7)) {
+                .story-card__text {
+                  padding: 8px;
+                }
+
+                .story-card__link {
+                  right: 8px;
+                  bottom: 6px;
+                }
+
+                .story-card__description {
+                  display: none;
+                }
+              }*/
+      }
     }
   }
 }

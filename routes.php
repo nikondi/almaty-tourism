@@ -11,3 +11,4 @@ Router::get('/requests', [RequestController::class, 'index']);
 Router::get('/request', [RequestController::class, 'show']);
 
 Router::get('/stories', [StoriesController::class, 'index']);
+Router::get('/story', [StoriesController::class, 'show']);

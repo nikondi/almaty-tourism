@@ -4,6 +4,7 @@
     </div>
     <div class="requests-filters">
         <div class="container">
+            <!-- TODO: фильтры и правильное отображение строк -->
             <div class="requests-filters-wrapper">
                 <button type="button" class="requests-filter-button">
                     <span>Фильтры</span>

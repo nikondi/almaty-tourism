@@ -1498,11 +1498,19 @@ body {
     property: background-color, color;
   };
 
+}
+
+a.tag {
   &:hover {
     color: $color-white;
     background-color: $color-black;
   }
+}
 
+.blur-tag {
+  border-color: $color-white;
+  color: $color-white;
+  backdrop-filter: blur(15px);
 }
 
 .requests-grid {
@@ -2635,6 +2643,7 @@ body {
     &::-ms-input-placeholder { /* Edge 12 -18 */
       color: rgba(#ffffff, .5);
     }
+
     &:hover,
     &:focus {
       border-color: #232323;
@@ -2666,7 +2675,380 @@ body {
   border: 0;
   color: $color-primary;
   background-color: #FFFFFF;
+
   &:hover {
     background-color: #ededed;
+  }
+}
+
+.catalog-first-section {
+  .section-title {
+    margin-bottom: 32px;
+  }
+}
+
+.catalog-tags {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.catalog-tag {
+  padding: 7px 15px;
+  text-align: left;
+}
+
+.catalog-filters-section {
+  margin-bottom: 20px;
+  margin-top: 32px;
+}
+
+
+.filters-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+  font-family: $font-secondary;
+}
+
+.filters-toggle {
+  display: inline-flex;
+  column-gap: 15px;
+  padding: 32px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.filters-inner {
+  padding: 64px 32px 32px 32px;
+}
+
+.filters-items {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.filters-show-types {
+  background-color: $color-white;
+  padding: 32px 8px 8px 32px;
+}
+
+.filters-top {
+  display: flex;
+}
+
+.filters-toggle-wrap {
+  flex: 1;
+}
+
+.filters-show-type {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+  background-color: transparent;
+
+  &.active {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+.filters-col {
+  max-width: 265px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+}
+
+.filters-wrapper {
+  border-radius: 8px;
+
+  &:not(.active) {
+    .filters-inner {
+      display: none;
+    }
+  }
+
+  &.active {
+    color: #fff;
+
+    .filters-toggle {
+      padding-left: 32px;
+    }
+
+    .filters-toggle-wrap {
+      background-color: $color-primary;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .filters-show-types {
+      position: relative;
+      border-bottom-left-radius: 8px;
+
+      &:before {
+        content: "";
+        background-color: $color-primary;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .filters-inner {
+      background-color: $color-primary;
+      border-radius: 0 8px 8px 8px;
+    }
+  }
+}
+
+.checkbox-label {
+  display: flex;
+  column-gap: 16px;
+  color: #232323;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  padding-top: 1px;
+
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__check {
+    display: block;
+    min-width: 24px;
+    margin-top: -1px;
+    height: 24px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    position: relative;
+    transition: {
+      duration: .1s;
+      property: color, background-color;
+    };
+
+    &:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: .1s opacity;
+      background: {
+        repeat: no-repeat;
+        position: center center;
+        image: url("/assets/img/icons/light/check.svg");
+      };
+    }
+  }
+
+  input:checked + &__check {
+    color: $color-primary;
+    background-color: currentColor;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &--light {
+    color: #FFFFFF;
+  }
+
+  &--light &__check:before {
+    background-image: url("/assets/img/icons/check.svg");
+  }
+
+  &--light input:checked + &__check {
+    color: #FFFFFF;
+  }
+}
+
+.filters-buttons {
+  margin-top: 56px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.filters-submit {
+  background: #ffffff;
+  color: $color-primary;
+  padding: 8px 24px;
+
+  &:hover {
+    background: #ededed;
+  }
+}
+
+.filters-reset {
+  padding: 8px 24px;
+
+  &:hover {
+    background: #FFFFFF;
+    color: $color-primary;
+  }
+}
+
+.contractors-grid {
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: 370px;
+}
+
+.contractor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #FFFFFF;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  padding: 24px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+  }
+  &__description {
+    margin-top: 8px;
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  &__tags {
+    gap: 8px;
+    .tag {
+      font-size: 14px;
+      line-height: 100%;
+      padding: 5px 8px 4px;
+    }
+  }
+
+  &__arrow {
+    min-width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    align-self: flex-end;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.2s;
+    img {
+      transition: filter 0.2s;
+      filter: invert(1);
+    }
+  }
+
+  &:hover &__arrow {
+    background-color: transparent;
+    img {
+      filter: invert(0);
+    }
+  }
+}
+
+.contractor-card-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+  }
+}
+
+.contractor-card-info {
+  display: flex;
+  column-gap: 36px;
+}
+
+.contractors-section {
+  margin-bottom: 160px;
+}
+
+@media (max-width: 1143px) {
+  .filters-items {
+    flex-direction: column;
+  }
+  .filters-inner {
+    padding: 32px 16px 40px;
+  }
+  .filters-buttons {
+    justify-content: center;
+  }
+}
+@media (min-width: 1144px) {
+  .contractors-grid {
+    grid-template-columns: repeat(6, 1fr);
+
+    .contractor-card {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(8),
+      &:nth-child(10) {
+        grid-column: span 3;
+      }
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7) {
+        grid-column: span 2;
+      }
+      &:nth-child(9) {
+        grid-column: span 3;
+        grid-row: span 2;
+      }
+    }
   }
 }

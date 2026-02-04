@@ -1,16 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 
     <symbol id="filters" viewBox="0 0 24 24">
-        <path d="M22 6.5H16" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+        <path d="M22 6.5H16" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round"
               stroke-linejoin="round"/>
-        <path d="M6 6.5H2" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+        <path d="M6 6.5H2" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round"
               stroke-linejoin="round"/>
         <path d="M10 10C11.933 10 13.5 8.433 13.5 6.5C13.5 4.567 11.933 3 10 3C8.067 3 6.5 4.567 6.5 6.5C6.5 8.433 8.067 10 10 10Z"
               stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
               stroke-linejoin="round"/>
-        <path d="M22 17.5H18" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+        <path d="M22 17.5H18" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round"
               stroke-linejoin="round"/>
-        <path d="M8 17.5H2" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+        <path d="M8 17.5H2" stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round"
               stroke-linejoin="round"/>
         <path d="M14 21C15.933 21 17.5 19.433 17.5 17.5C17.5 15.567 15.933 14 14 14C12.067 14 10.5 15.567 10.5 17.5C10.5 19.433 12.067 21 14 21Z"
               stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -18,13 +22,17 @@
     </symbol>
 
     <symbol id="grid" viewBox="0 0 24 24">
-        <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke="currentColor" fill="none" stroke-width="1.5"
+        <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke="currentColor" fill="none"
+              stroke-width="1.5"
               stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z" stroke="currentColor" fill="none"
+        <path d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z" stroke="currentColor"
+              fill="none"
               stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M17 22H19C21 22 22 21 22 19V17C22 15 21 14 19 14H17C15 14 14 15 14 17V19C14 21 15 22 17 22Z"
-              stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z" stroke="currentColor" fill="none"
+              stroke="currentColor" fill="none" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <path d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z" stroke="currentColor"
+              fill="none"
               stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
@@ -35,5 +43,10 @@
               stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
-
+    <symbol id="map" viewBox="0 0 24 24" fill="none">
+        <path d="M2.29004 7.77998V17.51C2.29004 19.41 3.64004 20.19 5.28004 19.25L7.63004 17.91C8.14004 17.62 8.99004 17.59 9.52004 17.86L14.77 20.49C15.3 20.75 16.15 20.73 16.66 20.44L20.99 17.96C21.54 17.64 22 16.86 22 16.22V6.48998C22 4.58998 20.65 3.80998 19.01 4.74998L16.66 6.08998C16.15 6.37998 15.3 6.40998 14.77 6.13998L9.52004 3.51998C8.99004 3.25998 8.14004 3.27998 7.63004 3.56998L3.30004 6.04998C2.74004 6.36998 2.29004 7.14998 2.29004 7.77998Z"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.55957 4V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.7305 6.62V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>

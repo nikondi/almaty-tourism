@@ -14,10 +14,10 @@
                     <ul class="footer-menu-list">
                         <?php
                         $menu = [
-                                ['text' => 'Каталог', 'link' => '#'],
+                                ['text' => 'Каталог', 'link' => '/catalog'],
                                 ['text' => 'Заявки', 'link' => '#'],
                                 ['text' => 'Аналитика', 'link' => '#'],
-                                ['text' => 'О нас', 'link' => '#'],
+                                ['text' => 'О нас', 'link' => '/about'],
                                 ['text' => 'Фото и видео банк', 'link' => '#'],
                         ];
                         foreach ($menu as $item) : ?>

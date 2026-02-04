@@ -13,7 +13,7 @@ if (!isset($lightHeader))
                 <div class="mobile-menu">
                     <nav class="header-nav">
                         <ul>
-                            <li><a href="#">Каталог</a></li>
+                            <li><a href="/catalog">Каталог</a></li>
                             <li><a href="/requests">Заявки</a></li>
                             <li><a href="#">Аналитика</a></li>
                             <li><a href="/about">О нас</a></li>

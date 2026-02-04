@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\AboutController;
 use App\Controllers\RequestController;
 use App\Controllers\StoriesController;
 use App\Controllers\WelcomeController;
@@ -12,3 +13,5 @@ Router::get('/request', [RequestController::class, 'show']);
 
 Router::get('/stories', [StoriesController::class, 'index']);
 Router::get('/story', [StoriesController::class, 'show']);
+
+Router::get('/about', AboutController::class);

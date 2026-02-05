@@ -90,9 +90,8 @@ $media = [
 <section class="media-gallery-section">
     <div class="container">
         <div class="media-gallery-grid">
-            <?php foreach ($media as $i => $item): ?>
+            <?php foreach ($media as $item): ?>
                 <a href="<?= $item['full'] ?>" class="media-gallery-item" data-fancybox="media">
-                    <?= $i + 1 ?>
                     <img src="<?= $item['preview'] ?>" alt=""/>
                 </a>
             <?php endforeach; ?>

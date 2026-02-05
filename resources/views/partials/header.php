@@ -17,7 +17,7 @@ if (!isset($lightHeader))
                             <li><a href="/requests">Заявки</a></li>
                             <li><a href="#">Аналитика</a></li>
                             <li><a href="/about">О нас</a></li>
-                            <li><a href="#">Фото и видео банк</a></li>
+                            <li><a href="/media/photo">Фото и видео банк</a></li>
                         </ul>
                     </nav>
                     <div class="header-actions">

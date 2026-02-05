@@ -2,6 +2,7 @@
 
 use App\Controllers\AboutController;
 use App\Controllers\CatalogController;
+use App\Controllers\MediaController;
 use App\Controllers\RequestController;
 use App\Controllers\StoriesController;
 use App\Controllers\WelcomeController;
@@ -19,3 +20,6 @@ Router::get('/about', AboutController::class);
 
 Router::get('/catalog', [CatalogController::class, 'index']);
 Router::get('/catalog/single', [CatalogController::class, 'show']);
+
+Router::get('/media/photo', [MediaController::class, 'photo']);
+Router::get('/media/video', [MediaController::class, 'video']);

@@ -18,7 +18,7 @@
                                 ['text' => 'Заявки', 'link' => '#'],
                                 ['text' => 'Аналитика', 'link' => '#'],
                                 ['text' => 'О нас', 'link' => '/about'],
-                                ['text' => 'Фото и видео банк', 'link' => '#'],
+                                ['text' => 'Фото и видео банк', 'link' => '/media/photo'],
                         ];
                         foreach ($menu as $item) : ?>
                             <li>

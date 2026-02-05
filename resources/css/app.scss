@@ -2945,6 +2945,7 @@ a.tag {
     font-size: 20px;
     line-height: 130%;
   }
+
   &__description {
     margin-top: 8px;
     font-family: $font-secondary;
@@ -2955,6 +2956,7 @@ a.tag {
 
   &__tags {
     gap: 8px;
+
     .tag {
       font-size: 14px;
       line-height: 100%;
@@ -2970,6 +2972,7 @@ a.tag {
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
     transition: background-color 0.2s;
+
     img {
       transition: filter 0.2s;
       filter: invert(1);
@@ -2978,6 +2981,7 @@ a.tag {
 
   &:hover &__arrow {
     background-color: transparent;
+
     img {
       filter: invert(0);
     }
@@ -2991,11 +2995,13 @@ a.tag {
   height: 100%;
   left: 0;
   top: 0;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   &:after {
     content: "";
     position: absolute;
@@ -3027,6 +3033,7 @@ a.tag {
     justify-content: center;
   }
 }
+
 @media (min-width: 1144px) {
   .contractors-grid {
     grid-template-columns: repeat(6, 1fr);
@@ -3040,15 +3047,302 @@ a.tag {
       &:nth-child(10) {
         grid-column: span 3;
       }
+
       &:nth-child(5),
       &:nth-child(6),
       &:nth-child(7) {
         grid-column: span 2;
       }
+
       &:nth-child(9) {
         grid-column: span 3;
         grid-row: span 2;
       }
     }
   }
+}
+
+.media-first-section {
+  margin-bottom: 32px;
+
+  .catalog-tags {
+    justify-content: center;
+  }
+}
+
+.media-tabs-section {
+  border-top: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+  margin-bottom: 42px;
+}
+
+.media-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.media-tabs {
+  display: flex;
+  column-gap: 70px;
+  margin-bottom: -1px;
+}
+
+.media-tab {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  svg {
+    display: block;
+  }
+
+  &.active {
+    border-bottom-color: $color-primary;
+    cursor: default;
+  }
+}
+
+.media-dropdown {
+  width: 100%;
+  max-width: 192px;
+}
+
+.dropdown {
+  position: relative;
+
+  &__label {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border: 1px solid #232323;
+    border-radius: 8px;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: {
+        image: url("/assets/img/icons/chevron-up.svg");
+        size: 100%;
+        repeat: no-repeat;
+      };
+      transform: rotate(180deg);
+      transition: transform .3s;
+    }
+  }
+
+  &.active {
+    .dropdown-inner {
+      visibility: visible;
+      opacity: 1;
+      top: calc(100% + 8px);
+    }
+  }
+
+  &.active &__label:after {
+    transform: rotate(0);
+  }
+}
+
+.dropdown-inner {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  cursor: unset;
+  top: calc(100% + 16px);
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #232323;
+
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+
+  transition: {
+    property: top, opacity, visibility;
+    duration: .3s;
+  };
+
+  &__subtitle {
+    margin-bottom: 9px;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+  }
+}
+
+.checked-row {
+  padding-left: 32px;
+  text-decoration: none;
+  color: inherit;
+
+  &.active {
+    background: {
+      position: top 4px left;
+      repeat: no-repeat;
+      image: url("/assets/img/icons/check.svg");
+      size: 16px;
+    };
+  }
+}
+
+.media-gallery-item {
+  display: block;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+.media-gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: 160px;
+}
+
+@media (min-width: 1144px) {
+  .media-gallery-grid {
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(2, 160px) repeat(2, 240px) repeat(2, 160px);
+    grid-auto-rows: 240px;
+
+    .media-gallery-item {
+      &:nth-child(1) {
+        grid-column: span 2;
+      }
+
+      &:nth-child(2) {
+        grid-row: span 2;
+        grid-column: span 4;
+      }
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        grid-column: span 4;
+      }
+
+      &:nth-child(4) {
+        grid-column: span 6;
+      }
+
+      &:nth-child(5) {
+        grid-column: span 2;
+      }
+
+      &:nth-child(7) {
+        grid-column: span 6;
+        grid-row: span 2;
+      }
+
+      &:nth-child(8) {
+        grid-column: span 6;
+      }
+
+      &:nth-child(9) {
+        grid-column: span 4;
+      }
+
+      &:nth-child(10) {
+        grid-column: span 5;
+        grid-row: span 2;
+      }
+
+      &:nth-child(11) {
+        grid-column: span 4;
+      }
+
+      &:nth-child(12) {
+        grid-column: span 7;
+      }
+
+      &:nth-child(13) {
+        grid-column: span 4;
+      }
+
+      &:nth-child(14) {
+        grid-column: span 4;
+        grid-row: span 2;
+      }
+
+      &:nth-child(15) {
+        grid-column: span 3;
+      }
+
+      &:nth-child(16) {
+        grid-column: span 5;
+      }
+
+      &:nth-child(17) {
+        grid-column: span 4;
+      }
+
+      &:nth-child(18) {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+
+@media (max-width: 1143px) {
+  .media-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+
+    .media-gallery-item {
+      &:nth-child(2) {
+        grid-row: span 2;
+      }
+      &:nth-child(7) {
+        grid-row: span 2;
+      }
+      &:nth-child(9) {
+        grid-column: span 2;
+      }
+      &:nth-child(10) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      &:nth-child(14) {
+        grid-row: span 2;
+      }
+      &:nth-child(18) {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+.media-gallery-section {
+  margin-bottom: 160px;
 }

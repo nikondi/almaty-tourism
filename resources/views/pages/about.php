@@ -177,11 +177,11 @@ $capabilities = [
             <div class="contacts-links">
                 <div class="contacts-links__title">Следите за нами</div>
                 <div class="contacts-links__list">
-                    <a href="#" class="contacts-link"><img src="/assets/img/icons/socials/facebook.svg" alt=""></a>
-                    <a href="#" class="contacts-link"><img src="/assets/img/icons/socials/inst.svg" alt=""></a>
-                    <a href="#" class="contacts-link"><img src="/assets/img/icons/socials/mail.svg" alt=""></a>
-                    <a href="#" class="contacts-link"><img src="/assets/img/icons/socials/linked_in.svg" alt=""></a>
-                    <a href="#" class="contacts-link"><img src="/assets/img/icons/socials/yt.svg" alt=""></a>
+                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/facebook.svg" alt=""></a>
+                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/inst.svg" alt=""></a>
+                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/mail.svg" alt=""></a>
+                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/linked_in.svg" alt=""></a>
+                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/yt.svg" alt=""></a>
                 </div>
             </div>
         </div>

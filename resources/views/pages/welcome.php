@@ -164,7 +164,7 @@
             <?php endforeach; ?>
         </div>
         <div class="welcome-photobank-button-wrapper">
-            <a href="#" class="btn btn-secondary">
+            <a href="/media/photo" class="btn btn-secondary">
                 <span>Смотреть фото</span>
                 <img src="/assets/img/icons/arrow-right.svg" alt="" class="btn-icon">
             </a>

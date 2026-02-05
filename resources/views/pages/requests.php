@@ -1,32 +1,15 @@
-<section class="requests-list-section">
+<section class="requests-title-section">
     <div class="container">
         <h1 class="section-title section-title--center">Заявки</h1>
     </div>
-    <div class="requests-filters">
-        <div class="container">
-            <!-- TODO: фильтры и правильное отображение строк -->
-            <div class="requests-filters-wrapper">
-                <button type="button" class="requests-filter-button">
-                    <span>Фильтры</span>
-                    <svg width="24" height="24">
-                        <use xlink:href="/assets/img/icons/filters.svg#filters"/>
-                    </svg>
-                </button>
-                <div class="requests-grid-types">
-                    <button class="requests-grid-type active" data-type="default">
-                        <svg width="24" height="24">
-                            <use xlink:href="/assets/img/icons/filters.svg#grid"/>
-                        </svg>
-                    </button>
-                    <button class="requests-grid-type" data-type="list">
-                        <svg width="24" height="24">
-                            <use xlink:href="/assets/img/icons/filters.svg#row-vertical"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+</section>
+
+<?php
+$show_map = false;
+include VIEW_PATH . 'sections/filter-section.php';
+?>
+
+<section class="requests-list-section">
     <div class="container">
         <div class="requests-grid">
             <?php

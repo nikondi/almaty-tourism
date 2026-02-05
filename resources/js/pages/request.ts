@@ -1,8 +1,11 @@
+import "swiper/css/pagination";
+
 import Swiper from "swiper";
-import {Navigation} from "swiper/modules";
+import {Navigation, Pagination} from "swiper/modules";
 
 export default function requestPage() {
   initMoreSlider();
+  initImageSlider();
 }
 
 
@@ -24,6 +27,22 @@ function initMoreSlider() {
       1144: {
         slidesPerView: 4
       }
+    }
+  });
+}
+
+function initImageSlider() {
+  const slider = document.querySelector<HTMLElement>('.request-image-slider');
+  if (!slider)
+    return;
+
+  new Swiper(slider, {
+    modules: [Pagination],
+    spaceBetween: 20,
+    pagination: {
+      enabled: true,
+      el: slider.querySelector<HTMLElement>('.swiper-pagination'),
+      clickable: true,
     }
   });
 }

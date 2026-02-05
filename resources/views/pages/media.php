@@ -40,8 +40,8 @@ $media = [
 <section class="media-tabs-section">
     <div class="container media-tabs-wrapper">
         <div class="media-tabs">
-            <a href="/media/photo" class="media-tab active">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="/media/photo" class="media-tab <?= $type == 'photo' ? ' active' : '' ?>">
+                <svg width=" 24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
                           stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path
@@ -53,7 +53,7 @@ $media = [
                 </svg>
                 <span>Фото 3.1т</span>
             </a>
-            <a href="/media/video" class="media-tab">
+            <a href="/media/video" class="media-tab <?= $type == 'video' ? ' active' : '' ?>">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
                           stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

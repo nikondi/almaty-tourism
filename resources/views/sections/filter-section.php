@@ -1,5 +1,6 @@
 <?php
-$show_type = $_GET['show'] ?? 'grid';
+$show_type = $show_type ?? 'grid';
+$url_prefix = $url_prefix ?? '';
 
 $filters = [
     [
@@ -19,6 +20,7 @@ $filters = [
         'items' => ['Горы', 'Ущелья', 'Озёра', 'Водопады', 'Парки', 'Эко‑тропы',]
     ],
 ];
+
 ?>
 
 <!-- TODO: строки и карта -->
@@ -35,28 +37,48 @@ $filters = [
                     </button>
                 </div>
                 <div class="filters-show-types">
-                    <button type="submit" class="filters-show-type<?= $show_type == 'grid' ? ' active' : ''; ?>"
-                            name="show"
-                            value="grid">
-                        <svg width="24" height="24">
-                            <use xlink:href="/assets/img/icons/filters.svg#grid"/>
-                        </svg>
-                    </button>
-                    <button type="submit" class="filters-show-type<?= $show_type == 'list' ? ' active' : ''; ?>"
-                            name="show"
-                            value="list">
-                        <svg width="24" height="24">
-                            <use xlink:href="/assets/img/icons/filters.svg#row-vertical"/>
-                        </svg>
-                    </button>
-                    <?php if ($show_map ?? false): ?>
-                        <button type="submit" class="filters-show-type<?= $show_type == 'map' ? ' active' : ''; ?>"
-                                name="show"
-                                value="map">
+                    <?php if (defined('BUILD')): ?>
+                        <a href="<?= $url_prefix ?>" class="filters-show-type<?= $show_type == 'grid' ? ' active' : ''; ?>">
                             <svg width="24" height="24">
-                                <use xlink:href="/assets/img/icons/filters.svg#map"/>
+                                <use xlink:href="/assets/img/icons/filters.svg#grid"/>
+                            </svg>
+                        </a>
+                        <a href="<?= $url_prefix ?>/list" class="filters-show-type<?= $show_type == 'list' ? ' active' : ''; ?>">
+                            <svg width="24" height="24">
+                                <use xlink:href="/assets/img/icons/filters.svg#row-vertical"/>
+                            </svg>
+                        </a>
+                        <?php if ($show_map ?? false): ?>
+                            <a href="<?= $url_prefix ?>/map" class="filters-show-type<?= $show_type == 'map' ? ' active' : ''; ?>">
+                                <svg width="24" height="24">
+                                    <use xlink:href="/assets/img/icons/filters.svg#map"/>
+                                </svg>
+                            </a>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <button type="submit" class="filters-show-type<?= $show_type == 'grid' ? ' active' : ''; ?>"
+                                name="show"
+                                value="grid">
+                            <svg width="24" height="24">
+                                <use xlink:href="/assets/img/icons/filters.svg#grid"/>
                             </svg>
                         </button>
+                        <button type="submit" class="filters-show-type<?= $show_type == 'list' ? ' active' : ''; ?>"
+                                name="show"
+                                value="list">
+                            <svg width="24" height="24">
+                                <use xlink:href="/assets/img/icons/filters.svg#row-vertical"/>
+                            </svg>
+                        </button>
+                        <?php if ($show_map ?? false): ?>
+                            <button type="submit" class="filters-show-type<?= $show_type == 'map' ? ' active' : ''; ?>"
+                                    name="show"
+                                    value="map">
+                                <svg width="24" height="24">
+                                    <use xlink:href="/assets/img/icons/filters.svg#map"/>
+                                </svg>
+                            </button>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
             </div>

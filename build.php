@@ -7,6 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 const BASE_PATH = __DIR__;
 const DIST_PATH = __DIR__ . '/dist';
+const BUILD = 1;
 
 include BASE_PATH . '/routes.php';
 

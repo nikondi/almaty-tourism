@@ -11,6 +11,7 @@ use App\Router;
 Router::get('/', WelcomeController::class);
 
 Router::get('/requests', [RequestController::class, 'index']);
+Router::get('/requests/list', [RequestController::class, 'list']);
 Router::get('/request', [RequestController::class, 'show']);
 
 Router::get('/stories', [StoriesController::class, 'index']);

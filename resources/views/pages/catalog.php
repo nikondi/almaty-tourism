@@ -35,7 +35,8 @@ $contractors = [
 
 <?php
 $show_map = true;
-include VIEW_PATH.'sections/filter-section.php';
+$url_prefix = '/catalog';
+include VIEW_PATH . 'sections/filter-section.php';
 ?>
 
 <section class="contractors-section">
@@ -57,7 +58,7 @@ include VIEW_PATH.'sections/filter-section.php';
                             <div class="contractor-card__description"><?= $contractor['description']; ?></div>
                         </div>
                         <div class="contractor-card__arrow">
-                            <img src="/assets/img/icons/light/arrow-up-right.svg" alt="" />
+                            <img src="/assets/img/icons/light/arrow-up-right.svg" alt=""/>
                         </div>
                     </div>
                 </a>

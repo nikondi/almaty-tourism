@@ -16,4 +16,12 @@ class RequestController extends Controller
             'title' => 'Заявки'
         ]);
     }
+
+    public function list(): string
+    {
+        return $this->render("pages/requests", [
+            'title' => 'Заявки',
+            'show_type' => 'list'
+        ]);
+    }
 }

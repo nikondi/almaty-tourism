@@ -2903,6 +2903,7 @@ a.tag {
   border-radius: 8px;
   border: 0;
   background-color: transparent;
+  color: inherit;
 
   &.active {
     background-color: $color-primary;

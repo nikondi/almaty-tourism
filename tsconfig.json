@@ -17,11 +17,13 @@
       "@/*": [
         "./resources/js/*"
       ]
-    }
+    },
+    "jsx": "react"
   },
   "include": [
     "resources/js/**/*.ts",
     "resources/js/**/*.tsx",
-    "resources/js/**/*.d.ts"
+    "resources/js/**/*.d.ts",
+    "node_modules/@yandex/ymaps3-types/index.d.ts"
   ]
 }

@@ -23,7 +23,7 @@ $filters = [
 
 ?>
 
-<!-- TODO: строки и карта -->
+<!-- TODO: карта -->
 <section class="filters-section catalog-filters-section">
     <div class="container">
         <form action="" class="filters-wrapper">

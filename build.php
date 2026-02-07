@@ -76,7 +76,6 @@ foreach ($routes as $uri => $route) {
     $filename = str_replace('/', '_', $uri) . '.html';
 
     $result = str_replace('</head>', $head_scripts . "\n</head>", $result);
-    $result = preg_replace('/<!-- vite scripts for develop -->.*<!-- vite scripts for develop -->/s', $body_scripts, $result);
     $result = str_replace(' crossorigin', '', $result);
     $result = str_replace('/assets/', 'assets/', $result);
     $result = str_replace(array_keys($replace_uris), $replace_uris, $result);

@@ -18,7 +18,7 @@ export default defineConfig({
       publicDirectory: 'public', // relative path to the hot file (default)
       hotFileName: 'hot', // name of the hot file (default)
       logging: false, // console log (default)
-    }),
+    })
   ],
   resolve: {
     alias: {

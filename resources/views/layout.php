@@ -25,9 +25,9 @@
 
 
 <?php // TODO: Remove on production ?>
-<!-- vite scripts for develop -->
-<?= vite(['resources/js/app.ts', 'resources/css/app.scss']) ?>
-<!-- vite scripts for develop -->
-
+<?php if (!defined('BUILD')): ?>
+    <?= vite(['resources/js/app.ts', 'resources/css/app.scss']) ?>
+    <!-- vite scripts for develop -->
+<?php endif; ?>
 </body>
 </html>

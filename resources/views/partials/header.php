@@ -21,12 +21,28 @@ if (!isset($lightHeader))
                         </ul>
                     </nav>
                     <div class="header-actions">
-                        <!-- TODO: lang switcher -->
-                        <div class="header-action lang-switcher">
-                            <span>RU</span>
-                            <span><img src="/assets/img/icons/<?= $lightHeader ? 'light/' : ''; ?>/chevron-down.svg"
-                                       alt=""></span>
+                        <div class="header-action dropdown lang-switcher">
+                            <div class="dropdown__label">
+                                <span>RU</span>
+                                <span>
+                                    <img src="/assets/img/icons/<?= $lightHeader ? 'light/' : ''; ?>/chevron-down.svg" alt="" class="lang-switcher__icon">
+                                </span>
+                            </div>
+                            <div class="dropdown-inner">
+                                <ul class="dropdown-inner__list">
+                                    <li>
+                                        <a href="#" class="checked-row active"><span>RU</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="checked-row"><span>EN</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="checked-row"><span>KZ</span></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
 
                         <a href="#" class="header-action">
                             <img src="/assets/img/icons/<?= $lightHeader ? 'light/' : ''; ?>/user.svg" alt="">

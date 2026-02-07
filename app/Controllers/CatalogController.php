@@ -12,7 +12,6 @@ class CatalogController extends Controller
     }
     public function show(): string
     {
-        /* TODO: catalog single */
         return $this->render("pages/catalog-single", [
             'title' => 'Карточка подрядчика'
         ]);

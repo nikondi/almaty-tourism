@@ -204,7 +204,24 @@ body {
   column-gap: 24px;
 }
 
-.header-action {
+.lang-switcher {
+  .dropdown__label:after {
+    content: none;
+  }
+  .dropdown-inner {
+    width: 110px;
+    right: 0;
+    left: auto;
+  }
+  &__icon {
+    transition: .2s transform;
+  }
+  &.active &__icon {
+    transform: rotate(-180deg);
+  }
+}
+
+.header-action:not(.dropdown) {
   display: inline-block;
   color: inherit;
   border: 1px solid currentColor;
@@ -222,12 +239,13 @@ body {
 }
 
 .lang-switcher {
-  display: inline-flex;
-  column-gap: 8px;
-  padding: 9px 15px;
-  cursor: pointer;
-  user-select: none;
-  align-items: center;
+  .dropdown__label {
+    column-gap: 8px;
+    padding: 9px 15px;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+  }
 }
 
 .mobile-burger {
@@ -829,7 +847,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   position: relative;
-  height: 327px;
+  height: 100%;
   border-radius: 8px;
   overflow: hidden;
 
@@ -1521,7 +1539,7 @@ a.tag {
 @media (min-width: 1144px) {
   .requests-grid:not(.request-grid--list) {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 372px);
+    grid-auto-rows: 372px;
 
     .request-card {
       height: 100%;
@@ -1756,6 +1774,7 @@ a.tag {
     }
   }
 }
+
 @media (max-width: 1143px) {
   .request-row {
     &__top {
@@ -3068,101 +3087,6 @@ a.tag {
   }
 }
 
-.contractors-grid {
-  display: grid;
-  gap: 20px;
-  grid-auto-rows: 370px;
-}
-
-.contractor-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #FFFFFF;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  text-decoration: none;
-  padding: 24px;
-
-  &__title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 130%;
-  }
-
-  &__description {
-    margin-top: 8px;
-    font-family: $font-secondary;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-  }
-
-  &__tags {
-    gap: 8px;
-
-    .tag {
-      font-size: 14px;
-      line-height: 100%;
-      padding: 5px 8px 4px;
-    }
-  }
-
-  &__arrow {
-    min-width: 36px;
-    height: 36px;
-    border-radius: 8px;
-    align-self: flex-end;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    transition: background-color 0.2s;
-
-    img {
-      transition: filter 0.2s;
-      filter: invert(1);
-    }
-  }
-
-  &:hover &__arrow {
-    background-color: transparent;
-
-    img {
-      filter: invert(0);
-    }
-  }
-}
-
-.contractor-card-background {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .4);
-  }
-}
-
-.contractor-card-info {
-  display: flex;
-  column-gap: 36px;
-}
-
 .contractors-section {
   margin-bottom: 160px;
 }
@@ -3183,7 +3107,7 @@ a.tag {
   .contractors-grid {
     grid-template-columns: repeat(6, 1fr);
 
-    .contractor-card {
+    .request-card {
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3),
@@ -3346,6 +3270,7 @@ a.tag {
 }
 
 .checked-row {
+  display: block;
   padding-left: 32px;
   text-decoration: none;
   color: inherit;
@@ -3681,6 +3606,7 @@ a.tag {
   display: flex;
   align-items: center;
   column-gap: 16px;
+  z-index: 1;
 }
 
 .review-card-text {
@@ -3777,4 +3703,8 @@ a.tag {
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
+}
+
+.map img {
+  max-width: unset;
 }

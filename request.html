@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
     <link href="assets/fonts/artifaktelement/stylesheet.css" rel="stylesheet">
-<script type="module" src="assets/js/app-BwnqCwlr.js"></script>
-<link rel="stylesheet" href="assets/css/app-kLTk1CKf.css">
+<script type="module" src="assets/js/app-ByXR-Ugf.js"></script>
+<link rel="stylesheet" href="assets/css/app-BNb45IUS.css">
 </head>
 <body>
     <header class="header">
@@ -36,12 +36,28 @@
                         </ul>
                     </nav>
                     <div class="header-actions">
-                        <!-- TODO: lang switcher -->
-                        <div class="header-action lang-switcher">
-                            <span>RU</span>
-                            <span><img src="assets/img/icons//chevron-down.svg"
-                                       alt=""></span>
+                        <div class="header-action dropdown lang-switcher">
+                            <div class="dropdown__label">
+                                <span>RU</span>
+                                <span>
+                                    <img src="assets/img/icons//chevron-down.svg" alt="" class="lang-switcher__icon">
+                                </span>
+                            </div>
+                            <div class="dropdown-inner">
+                                <ul class="dropdown-inner__list">
+                                    <li>
+                                        <a href="#" class="checked-row active"><span>RU</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="checked-row"><span>EN</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="checked-row"><span>KZ</span></a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
 
                         <a href="#" class="header-action">
                             <img src="assets/img/icons//user.svg" alt="">
@@ -57,136 +73,135 @@
     <div class="header-placeholder"></div>
 
 
-    <section class="request-top-section">
-        <div class="container">
-            <div class="request-top">
-                <h1 class="request-title section-title">Конференция на 120 человек</h1>
-                <div class="request-top__date">
-                    <b>Дата публикации:</b>
-                    <time datetime="2025-11-05">5 ноября 2025</time>
-                </div>
+<section class="request-top-section">
+    <div class="container">
+        <div class="request-top">
+            <h1 class="request-title section-title">Конференция на 120 человек</h1>
+            <div class="request-top__date">
+                <b>Дата публикации:</b>
+                <time datetime="2025-11-05">5 ноября 2025</time>
             </div>
-            <img class="request-image" src="assets/img/request/main.png" alt=""/>
         </div>
-    </section>
+        <img class="request-image" src="assets/img/request/main.png" alt=""/>
+    </div>
+</section>
 
-    <section class="request-content-section">
-        <div class="container">
-            <div class="request-content">
-                <div class="request-info">
-                    <div class="request-info-section">
-                        <div class="request-info-section__title">Основная информация</div>
-                        <div class="request-info-section__content">
-                            <table class="request-info-main">
-                                <tr>
-                                    <td>Тип события:</td>
-                                    <td>Конференция</td>
-                                </tr>
-                                <tr>
-                                    <td>Даты:</td>
-                                    <td>15–16 ноября 2025</td>
-                                </tr>
-                                <tr>
-                                    <td>Количество участников:</td>
-                                    <td>120</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="request-info-section">
-                        <div class="request-info-section__title">Описание</div>
-                        <div class="request-info-section__content">
-                            Компания ищет современный зал в центре Алматы с полным техническим оснащением и кейтерингом. Важно, чтобы помещение подходило для двухдневной конференции и имело удобный доступ к транспорту.                        </div>
-                    </div>
-                    <div class="request-info-section">
-                        <div class="request-info-section__title">Что требуется</div>
-                        <div class="request-info-section__content">
-                            <div class="tags request-need-tags">
-                                                                    <div class="tag request-need-tag">Площадка с рассадкой «театр»</div>
-                                                                    <div class="tag request-need-tag">Сцена, проектор, звуковое оборудование</div>
-                                                                    <div class="tag request-need-tag">Кофе-брейк на 120 человек</div>
-                                                                    <div class="tag request-need-tag">Переводчик RU/EN</div>
-                                                            </div>
-                        </div>
-                    </div>
-                    <div class="request-info-section">
-                        <div class="request-info-section__title">Дополнительная информация</div>
-                        <div class="request-info-section__content request-additional">
-                            <a href="#" class="btn btn-secondary btn--narrow">Список участников</a>
-                            <a href="#" class="btn btn-secondary btn--narrow">Скачать бриф</a>
-                        </div>
-                    </div>
-                    <div class="request-info-section request-info-map">
-                        <div class="request-info-section__title">
-                            <div>Карта</div>
-                            <div class="request-info-map__district">
-                                <b>Желаемый район:</b>
-                                <span>Ауэзовский район</span>
-                            </div>
-                        </div>
-                        <div class="request-info-section__content">
-                            <!-- TODO: map -->
-                            <div class="request-info-map__map"></div>
-                        </div>
-                    </div>
-                    <div class="request-info-section">
-                        <div class="request-info-section__title">Связаться с клиентом</div>
-                        <div class="request-info-section__content">
-                            <div class="request-info-client">
-                                <div class="request-info-client__image"><img src="assets/img/request/client.png" alt=""></div>
-                                <div class="request-info-client__content">
-                                    <div class="request-info-client__name">Сергей Александр</div>
-                                    <div class="request-info-client__contact">
-                                        <a href="tel:ххх-ххх-ххх">
-                                            <img src="assets/img/icons/call.svg" alt="">
-                                            <span>ххх-ххх-ххх</span>
-                                        </a>
-                                    </div>
-                                    <div class="request-info-client__contact">
-                                        <a href="mailto:ххххх@mail.com">
-                                            <img src="assets/img/icons/sms.svg" alt="">
-                                            <span>ххххх@mail.com</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="request-info-client__more">
-                                    <a href="#">Показать информацию</a>
-                                </div>
-                            </div>
-                        </div>
+<section class="request-content-section">
+    <div class="container">
+        <div class="request-content">
+            <div class="request-info">
+                <div class="request-info-section">
+                    <div class="request-info-section__title">Основная информация</div>
+                    <div class="request-info-section__content">
+                        <table class="request-info-main">
+                            <tr>
+                                <td>Тип события:</td>
+                                <td>Конференция</td>
+                            </tr>
+                            <tr>
+                                <td>Даты:</td>
+                                <td>15–16 ноября 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Количество участников:</td>
+                                <td>120</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-                <div class="request-side">
-                    <div class="request-side-tags tags">
-                                                    <div class="tag request-side-tag">Кейтеринг и питание</div>
-                                                    <div class="tag request-side-tag">Конференция</div>
-                                                    <div class="tag request-side-tag">Переводчик</div>
-                                                    <div class="tag request-side-tag">+100 человек</div>
-                                                    <div class="tag request-side-tag">Техническое оборудование</div>
-                                            </div>
-                    <div class="request-side-client">
-                        <div class="request-side-client-inner">
-                            <div class="request-side-client__image"><img src="assets/img/request/client.png" alt=""></div>
-                            <div class="request-side-client__content">
-                                <div class="request-side-client__name">Сергей Александр</div>
-
-                                <a href="tel:ххх-ххх-ххх" class="request-side-client__contact">
-                                    <img src="assets/img/icons/call.svg" alt="">
-                                    <span>ххх-ххх-ххх</span>
-                                </a>
-
-                                <a href="mailto:ххххх@mail.com" class="request-side-client__contact">
-                                    <img src="assets/img/icons/sms.svg" alt="">
-                                    <span>ххххх@mail.com</span>
-                                </a>
+                <div class="request-info-section">
+                    <div class="request-info-section__title">Описание</div>
+                    <div class="request-info-section__content">
+                        Компания ищет современный зал в центре Алматы с полным техническим оснащением и кейтерингом. Важно, чтобы помещение подходило для двухдневной конференции и имело удобный доступ к транспорту.                    </div>
+                </div>
+                <div class="request-info-section">
+                    <div class="request-info-section__title">Что требуется</div>
+                    <div class="request-info-section__content">
+                        <div class="tags request-need-tags">
+                                                            <div class="tag request-need-tag">Площадка с рассадкой «театр»</div>
+                                                            <div class="tag request-need-tag">Сцена, проектор, звуковое оборудование</div>
+                                                            <div class="tag request-need-tag">Кофе-брейк на 120 человек</div>
+                                                            <div class="tag request-need-tag">Переводчик RU/EN</div>
+                                                    </div>
+                    </div>
+                </div>
+                <div class="request-info-section">
+                    <div class="request-info-section__title">Дополнительная информация</div>
+                    <div class="request-info-section__content request-additional">
+                        <a href="#" class="btn btn-secondary btn--narrow">Список участников</a>
+                        <a href="#" class="btn btn-secondary btn--narrow">Скачать бриф</a>
+                    </div>
+                </div>
+                <div class="request-info-section request-info-map">
+                    <div class="request-info-section__title">
+                        <div>Карта</div>
+                        <div class="request-info-map__district">
+                            <b>Желаемый район:</b>
+                            <span>Ауэзовский район</span>
+                        </div>
+                    </div>
+                    <div class="request-info-section__content">
+                        <div class="request-info-map__map" data-data="{&quot;coords&quot;:[76.945645,43.237163]}"></div>
+                    </div>
+                </div>
+                <div class="request-info-section">
+                    <div class="request-info-section__title">Связаться с клиентом</div>
+                    <div class="request-info-section__content">
+                        <div class="request-info-client">
+                            <div class="request-info-client__image"><img src="assets/img/request/client.png" alt=""></div>
+                            <div class="request-info-client__content">
+                                <div class="request-info-client__name">Сергей Александр</div>
+                                <div class="request-info-client__contact">
+                                    <a href="tel:ххх-ххх-ххх">
+                                        <img src="assets/img/icons/call.svg" alt="">
+                                        <span>ххх-ххх-ххх</span>
+                                    </a>
+                                </div>
+                                <div class="request-info-client__contact">
+                                    <a href="mailto:ххххх@mail.com">
+                                        <img src="assets/img/icons/sms.svg" alt="">
+                                        <span>ххххх@mail.com</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="request-info-client__more">
+                                <a href="#">Показать информацию</a>
                             </div>
                         </div>
-                        <a href="#" class="btn btn-secondary">Показать информацию</a>
                     </div>
                 </div>
             </div>
+            <div class="request-side">
+                <div class="request-side-tags tags">
+                                            <div class="tag request-side-tag">Кейтеринг и питание</div>
+                                            <div class="tag request-side-tag">Конференция</div>
+                                            <div class="tag request-side-tag">Переводчик</div>
+                                            <div class="tag request-side-tag">+100 человек</div>
+                                            <div class="tag request-side-tag">Техническое оборудование</div>
+                                    </div>
+                <div class="request-side-client">
+                    <div class="request-side-client-inner">
+                        <div class="request-side-client__image"><img src="assets/img/request/client.png" alt=""></div>
+                        <div class="request-side-client__content">
+                            <div class="request-side-client__name">Сергей Александр</div>
+
+                            <a href="tel:ххх-ххх-ххх" class="request-side-client__contact">
+                                <img src="assets/img/icons/call.svg" alt="">
+                                <span>ххх-ххх-ххх</span>
+                            </a>
+
+                            <a href="mailto:ххххх@mail.com" class="request-side-client__contact">
+                                <img src="assets/img/icons/sms.svg" alt="">
+                                <span>ххххх@mail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-secondary">Показать информацию</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
 <section class="more-requests-section more-requests slider-wrapper">
@@ -344,6 +359,9 @@
         </div>
     </div>
 </section>
+<!-- TODO: для карты -->
+<script src="https://api-maps.yandex.ru/v3/?apikey=2d1ba930-83e2-4cb7-91d4-6b9f44288f74&lang=ru_RU"></script>
+
 <footer class="footer">
     <div class="container">
         <div class="footer-logo">
@@ -452,8 +470,6 @@
         <video src="assets/video/footer-video.mp4" muted autoplay playsinline loop></video>
     </div>
 </footer>
-
-
 
 
 </body>

@@ -19,7 +19,6 @@ $client = [
 ];
 
 ?>
-<!-- TODO: мобилка -->
 <section class="story-section">
     <div class="container">
         <div class="story-top">

@@ -1,4 +1,3 @@
-<!--TODO: mobile-->
 <section class="about-first-section">
     <div class="container">
         <div class="about-first-grid">
@@ -19,7 +18,7 @@
         </div>
     </div>
 </section>
-<!--TODO: mobile-->
+
 <section class="about-mission-section">
     <div class="container">
         <div class="about-mission-wrapper">
@@ -166,7 +165,6 @@ $capabilities = [
 
 <?php include VIEW_PATH . 'partials/faq-section.php'; ?>
 
-<!--TODO: mobile-->
 <section class="contacts-section">
     <div class="container contacts-wrapper">
         <div class="contacts-left">
@@ -177,10 +175,12 @@ $capabilities = [
             <div class="contacts-links">
                 <div class="contacts-links__title">Следите за нами</div>
                 <div class="contacts-links__list">
-                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/facebook.svg" alt=""></a>
+                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/facebook.svg"
+                                                           alt=""></a>
                     <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/inst.svg" alt=""></a>
                     <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/mail.svg" alt=""></a>
-                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/linked_in.svg" alt=""></a>
+                    <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/linked_in.svg"
+                                                           alt=""></a>
                     <a href="#" class="contacts-link"><img src="/assets/img/icons/light/socials/yt.svg" alt=""></a>
                 </div>
             </div>
@@ -189,27 +189,32 @@ $capabilities = [
             <div class="contacts-form-row">
                 <div class="contacts-form-field">
                     <label for="contacts-form-name" class="contacts-form-field__label">Имя</label>
-                    <input class="contacts-form-field__input" type="text" name="name" id="contacts-form-name" placeholder="Булат">
+                    <input class="contacts-form-field__input" type="text" name="name" id="contacts-form-name"
+                           placeholder="Булат">
                 </div>
                 <div class="contacts-form-field">
                     <label for="contacts-form-email" class="contacts-form-field__label">Почта</label>
-                    <input class="contacts-form-field__input" type="email" name="email" id="contacts-form-email" placeholder="example@mail.com">
+                    <input class="contacts-form-field__input" type="email" name="email" id="contacts-form-email"
+                           placeholder="example@mail.com">
                 </div>
             </div>
             <div class="contacts-form-row">
                 <div class="contacts-form-field">
                     <label for="contacts-form-phone" class="contacts-form-field__label">Телефон</label>
-                    <input class="contacts-form-field__input" type="tel" name="phone" id="contacts-form-phone" placeholder="123-456-7890">
+                    <input class="contacts-form-field__input" type="tel" name="phone" id="contacts-form-phone"
+                           placeholder="123-456-7890">
                 </div>
                 <div class="contacts-form-field">
                     <label for="contacts-form-question" class="contacts-form-field__label">Вопрос</label>
-                    <input class="contacts-form-field__input" type="text" name="question" id="contacts-form-question" placeholder="Партнерство">
+                    <input class="contacts-form-field__input" type="text" name="question" id="contacts-form-question"
+                           placeholder="Партнерство">
                 </div>
             </div>
             <div class="contacts-form-row">
                 <div class="contacts-form-field">
                     <label for="contacts-form-message" class="contacts-form-field__label">Сообщение</label>
-                    <textarea class="contacts-form-field__input" type="text" name="message" id="contacts-form-message" placeholder="Напиши свое сообщение здесь..."></textarea>
+                    <textarea class="contacts-form-field__input" type="text" name="message" id="contacts-form-message"
+                              placeholder="Напиши свое сообщение здесь..."></textarea>
                 </div>
             </div>
             <button type="submit" name="contacts_form" class="btn contacts-form-button">Отправить</button>

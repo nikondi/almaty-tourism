@@ -118,16 +118,16 @@
         <h3 class="section-title">Актуальные запросы</h3>
         <?php
         $actual_requests = [
-            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Конференция на 120 человек', 'description' => 'Ищу современный зал с техническим оснащением и питанием для проведения двухдневной конференции.'],
-            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Корпоратив для IT-компании', 'description' => 'Хочу организовать новогодний корпоратив с ведущим и банкетом в уютной атмосфере для 100 гостей.'],
-            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тренинг для сотрудников', 'description' => 'Необходим небольшой зал с переводчиком и техникой для проведения двухдневного тренинга в октябре.'],
-            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тимбилдинг за городом', 'description' => 'Компания планирует выездной тимбилдинг с играми, питанием и транспортом для коллектива из 60 человек.'],
-            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Презентация нового продукта', 'description' => 'Бизнес запускает новый продукт и хочет провести яркое мероприятие с презентацией, сценой и видеосъёмкой.'],
-            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Международный форум', 'description' => 'Крупный заказчик готовит трёхдневный форум для зарубежных делегаций с проживанием, питанием и синхронным переводом.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Конференция на 120 человек', 'short' => 'Ищу современный зал с техническим оснащением и питанием для проведения двухдневной конференции.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Корпоратив для IT-компании', 'short' => 'Хочу организовать новогодний корпоратив с ведущим и банкетом в уютной атмосфере для 100 гостей.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тренинг для сотрудников', 'short' => 'Необходим небольшой зал с переводчиком и техникой для проведения двухдневного тренинга в октябре.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Тимбилдинг за городом', 'short' => 'Компания планирует выездной тимбилдинг с играми, питанием и транспортом для коллектива из 60 человек.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Презентация нового продукта', 'short' => 'Бизнес запускает новый продукт и хочет провести яркое мероприятие с презентацией, сценой и видеосъёмкой.'],
+            ['date' => '10 ноября 2025', 'image' => '/assets/img/welcome/actual-request.png', 'link' => '/request', 'title' => 'Международный форум', 'short' => 'Крупный заказчик готовит трёхдневный форум для зарубежных делегаций с проживанием, питанием и синхронным переводом.'],
         ];
         ?>
         <div class="actual-requests-grid">
-            <?php foreach ($actual_requests as $card): ?>
+            <?php foreach ($actual_requests as $item): ?>
                 <?php include VIEW_PATH . 'components/request-card.php'; ?>
             <?php endforeach; ?>
         </div>

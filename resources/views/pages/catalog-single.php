@@ -1,5 +1,6 @@
 <?php
 $contractor = [
+    'coords' => [76.945645, 43.237163],
     'title' => 'Grand Conference Hall',
     'type' => 'Премиум-зал для конференций и форумов',
     'images' => [
@@ -124,8 +125,7 @@ $reviews = [
                         <div>Карта</div>
                     </div>
                     <div class="request-info-section__content">
-                        <!-- TODO: map -->
-                        <div class="request-info-map__map"></div>
+                        <div class="request-info-map__map" data-data="<?= htmlspecialchars(json_encode(['coords' => $contractor['coords']])) ?>"></div>
                     </div>
                 </div>
             </div>
@@ -239,3 +239,5 @@ $reviews = [
 
 <?php include VIEW_PATH . 'sections/more-requests.php'; ?>
 
+<!-- TODO: для карты -->
+<script src="https://api-maps.yandex.ru/v3/?apikey=2d1ba930-83e2-4cb7-91d4-6b9f44288f74&lang=ru_RU"></script>

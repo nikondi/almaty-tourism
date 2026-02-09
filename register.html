@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
     <link href="assets/fonts/artifaktelement/stylesheet.css" rel="stylesheet">
-<script type="module" src="assets/js/app-DcHeXCgb.js"></script>
+<script type="module" src="assets/js/app-CeX7OzcU.js"></script>
 <link rel="stylesheet" href="assets/css/app-B-JWHobJ.css">
 </head>
 <body>
@@ -28,7 +28,14 @@
             </a>
         </div>
         <div class="auth-content">
-            <div class="auth-form register-form">
+            <script>
+    // TODO: на нормальную отправку. Нужно для билда
+    function onRegisterSubmit() {
+        window.location.href = "register_success.html";
+        return false;
+    }
+</script>
+<div class="auth-form register-form">
     <div class="register-step-indicators">
     <div class="register-step-indicator active"></div>
     <div class="register-step-indicator"></div>
@@ -36,7 +43,7 @@
     <div class="register-step-indicator"></div>
 </div>
 
-<div class="auth-form__title">Регистрация</div>    <form id="register-form" onsubmit="window.location.href= '/register/success'; return false;">
+<div class="auth-form__title">Регистрация</div>    <form id="register-form" onsubmit="return onRegisterSubmit()">
         <div class="register-step active">
             <fieldset class="auth-fieldset">
                 <label class="register-btn-checkbox">

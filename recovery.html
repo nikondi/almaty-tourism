@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
     <link href="assets/fonts/artifaktelement/stylesheet.css" rel="stylesheet">
-<script type="module" src="assets/js/app-DcHeXCgb.js"></script>
+<script type="module" src="assets/js/app-CeX7OzcU.js"></script>
 <link rel="stylesheet" href="assets/css/app-B-JWHobJ.css">
 </head>
 <body>
@@ -28,12 +28,19 @@
             </a>
         </div>
         <div class="auth-content">
-            <div class="auth-form">
+            <script>
+    // TODO: на нормальную отправку. Нужно для билда
+    function onRecoverySubmit() {
+        window.location.href = "recovery_sended.html";
+        return false;
+    }
+</script>
+<div class="auth-form">
     <div class="auth-form__title">Забыли пароль?</div>
     <div class="auth-form__description">Пожалуйста, введите ваш зарегистрированный адрес электронной почты. Мы отправим
         вам ссылку на создание нового пароля
     </div>
-    <form onsubmit="window.location.href = '/recovery/sended'; return false" id="recovery-form">
+    <form onsubmit="return onRecoverySubmit()" id="recovery-form">
         <fieldset class="auth-fieldset">
             <div class="auth-field">
                 <div class="auth-field-inner">

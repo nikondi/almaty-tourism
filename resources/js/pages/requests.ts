@@ -1,6 +1,6 @@
-import {Feature, LngLat} from "@yandex/ymaps3-types";
-import {YMapClustererProps} from "@yandex/ymaps3-types/packages/clusterer/YMapClusterer/YMapClusterer";
-import {MapEventUpdateHandler} from "@yandex/ymaps3-types/imperative/YMapListener";
+import type {Feature, LngLat, LngLatBounds, YMapLocationRequest} from "@yandex/ymaps3-types";
+import type {YMapClustererProps} from "@yandex/ymaps3-types/packages/clusterer/YMapClusterer/YMapClusterer";
+import type {MapEventUpdateHandler} from "@yandex/ymaps3-types/imperative/YMapListener";
 
 export default function requestsPage() {
   initRequestRow();
@@ -119,6 +119,7 @@ type MapData = {
   items: MapItem[]
 }
 
+const COMMON_LOCATION_PARAMS: Partial<YMapLocationRequest> = {easing: 'ease-in-out', duration: 1000};
 
 async function initMap(wrapper: HTMLElement) {
   ymaps3.strictMode = true;
@@ -144,14 +145,6 @@ async function initMap(wrapper: HTMLElement) {
     sidebar.innerHTML = '';
     items.forEach((item) => {
       const elem = template.content.firstElementChild.cloneNode(true) as HTMLElement;
-      /*
-                <div class="map-side-item-image">img</div>
-                <div class="map-side-item-content">
-                    <div class="map-side-item-date tags"></div>
-                    <a href="" class="map-side-item-title"></a>
-                    <div class="map-side-item-description"></div>
-                </div>
-      * */
 
       elem.querySelector<HTMLImageElement>('.map-side-item-image img').src = item.image;
 
@@ -163,7 +156,7 @@ async function initMap(wrapper: HTMLElement) {
 
       sidebar.append(elem);
 
-      elem.dataset.id = item.id+'';
+      elem.dataset.id = item.id + '';
     })
 
   }
@@ -206,15 +199,47 @@ async function initMap(wrapper: HTMLElement) {
   const cluster: YMapClustererProps['cluster'] = (coordinates: LngLat, features: Feature[]) => new ymaps3.YMapMarker(
     {
       coordinates,
-      source: 'my-source'
+      source: 'my-source',
+      onClick() {
+        const bounds = getBounds(features.map((feature: Feature) => feature.geometry.coordinates));
+        map.update({location: {bounds, ...COMMON_LOCATION_PARAMS}});
+      }
     },
     circle(features.length)
   );
+
+  function getBounds(coordinates: number[][]): LngLatBounds {
+    let minLat = Infinity,
+      minLng = Infinity;
+    let maxLat = -Infinity,
+      maxLng = -Infinity;
+
+    for (const coords of coordinates) {
+      const lat = coords[1];
+      const lng = coords[0];
+
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lng > maxLng) maxLng = lng;
+    }
+
+    return [
+      [minLng, minLat],
+      [maxLng, maxLat]
+    ] as LngLatBounds;
+  }
 
   function circle(count: number) {
     const circle = document.createElement('div');
     circle.className = 'map-marker map-marker--circle';
     circle.innerHTML = `<div class="map-marker__inner">${count}</div>`;
+    circle.addEventListener('mouseover', (e) => {
+      (e.target as HTMLElement).closest<HTMLElement>('.ymaps3x0--marker').style.zIndex = '2';
+    });
+    circle.addEventListener('mouseleave', (e) => {
+      (e.target as HTMLElement).closest<HTMLElement>('.ymaps3x0--marker').style.zIndex = '0';
+    });
     return circle;
   }
 

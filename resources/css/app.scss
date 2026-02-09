@@ -3789,6 +3789,11 @@ a.tag {
   padding: 2px;
   transform: translate(-50%, -50%);
   background-color: #FFFFFF;
+  cursor: pointer;
+
+  &:hover {
+    z-index: 2;
+  }
 
   &__inner {
     display: block;

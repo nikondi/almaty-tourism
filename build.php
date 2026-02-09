@@ -36,7 +36,7 @@ $to_clean = [
     BASE_PATH . '/.vite',
 ];
 foreach ($to_clean as $file) {
-    if(file_exists($file)) {
+    if (file_exists($file)) {
         console_print("Delete $file");
         rm($file);
     }
@@ -96,7 +96,7 @@ foreach (glob(DIST_PATH . '/assets/css/*.css') as $css_file) {
 // -- Committing
 if (isset($my_args['commit'])) {
     try {
-        if(!hasCommand('git'))
+        if (!hasCommand('git'))
             throw new Exception("GIT not installed!");
 
         $current_branch = trim(shell_exec('git rev-parse --abbrev-ref HEAD'), "\ \n\r\t\v\0");
@@ -145,7 +145,7 @@ if (isset($my_args['commit'])) {
             passthru('git add .');
             passthru('git commit -m "' . $message . '"');
 
-            $push = ask("\nPush (1: yes, 2: no)", '1');
+            $push = confirm("\nPush");
 
             if ($push == '1') {
                 console_print("\n-- Pushing $new_branch", 'blue');
@@ -153,7 +153,7 @@ if (isset($my_args['commit'])) {
             }
         }
 
-        $return_to = ask("\nReturn to $current_branch (1: yes, 2: no)", '1');
+        $return_to = confirm("\nReturn to $current_branch");
 
         if ($return_to == '1') {
             console_print("\n-- Checkout $new_branch", 'blue');
@@ -161,29 +161,26 @@ if (isset($my_args['commit'])) {
             console_print("\n-- Pop stash", 'blue');
             passthru('git stash pop');
         }
-    }
-    catch (Exception $e) {
+    } catch (Exception $e) {
         console_print("\nError while committing: " . $e->getMessage(), 'red');
     }
 }
 
 if (isset($my_args['zip'])) {
     console_print("\n==== Compressing to zip ====", 'yellow');
-    $filename = empty($my_args['zip']) ? 'nord-minerals-demo.zip' : $my_args['zip'];
-    if(basename($filename) == $filename)
-        $filename = DIST_PATH.DIRECTORY_SEPARATOR.$filename;
-    if(!str_ends_with($filename, '.zip'))
+    $filename = empty($my_args['zip']) ? basename(__DIR__) . '-demo.zip' : $my_args['zip'];
+    if (basename($filename) == $filename)
+        $filename = DIST_PATH . DIRECTORY_SEPARATOR . $filename;
+    if (!str_ends_with($filename, '.zip'))
         $filename .= '.zip';
 
     console_print("Dest: $filename", 'blue');
 
-    if(createZip(DIST_PATH, $filename))
+    if (createZip(DIST_PATH, $filename))
         console_print("Compressing done", 'green');
 }
 
 console_print("\nDone.", 'green');
-
-
 
 
 // -- Functions
@@ -206,10 +203,10 @@ function console_print(string $text, $color = null): void
 
 function rm(string $dir): void
 {
-    if(!file_exists($dir))
+    if (!file_exists($dir))
         return;
 
-    if(is_file($dir)) {
+    if (is_file($dir)) {
         unlink($dir);
         return;
     }
@@ -225,7 +222,7 @@ function rm(string $dir): void
 
 function rcopy(string $from, string $to): void
 {
-    if(is_file($from)) {
+    if (is_file($from)) {
         copy($from, $to);
         return;
     }
@@ -245,19 +242,35 @@ function rcopy(string $from, string $to): void
     closedir($dir);
 }
 
-function ask(string $question, string $default = ''): string {
-    printf("%s (%s): ", $question, $default);
+function ask(string $question, string $default = ''): string
+{
+    printf("%s%s: ", $question, !empty($default) ? " ($default)" : '');
 
     $result = fgets(STDIN);
 
-    if(empty(trim($result)))
+    if (empty(trim($result)))
         return $default;
 
     return trim($result);
 }
 
+function confirm(string $question, bool $default = true): bool
+{
+    $hint = sprintf('(%s/%s)',
+        $default ? 'Y' : 'y',
+        $default ? 'n' : 'N',
+    );
 
-function hasGitChanges(): bool {
+    do {
+        $result = ask("$question $hint", $default ? 'y' : 'n');
+    } while (!in_array($result, ['y', 'n', '1', '0']));
+
+    return in_array($result, ['y', '1']);
+}
+
+
+function hasGitChanges(): bool
+{
     $output = shell_exec('git status --porcelain 2>&1');
     return !empty(trim($output));
 }
@@ -265,8 +278,8 @@ function hasGitChanges(): bool {
 function hasCommand(string $command): bool
 {
     $command = strtoupper(substr(PHP_OS, 0, 3)) === 'WIN'
-        ? 'where '.$command.' 2>nul'
-        : 'command -v '.$command.' 2>/dev/null';
+        ? 'where ' . $command . ' 2>nul'
+        : 'command -v ' . $command . ' 2>/dev/null';
 
     exec($command, $output, $returnCode);
 
@@ -275,7 +288,7 @@ function hasCommand(string $command): bool
 
 function createZip($source, $destination): bool
 {
-    if(!file_exists($source))
+    if (!file_exists($source))
         return false;
 
     if (extension_loaded('zip')) {
@@ -308,9 +321,8 @@ function createZip($source, $destination): bool
         }
 
         return $zip->close();
-    }
-    else if(hasCommand('zip')) {
-        exec('zip -r "'.$destination.'" "'.$source.'" 2>&1', $output, $returnCode);
+    } else if (hasCommand('zip')) {
+        exec('zip -r "' . $destination . '" "' . $source . '" 2>&1', $output, $returnCode);
 
         return $returnCode === 0;
     }

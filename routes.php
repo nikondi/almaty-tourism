@@ -20,6 +20,9 @@ Router::get('/story', [StoriesController::class, 'show']);
 Router::get('/about', AboutController::class);
 
 Router::get('/catalog', [CatalogController::class, 'index']);
+Router::get('/catalog/map', [CatalogController::class, 'map']);
+Router::get('/catalog/list', [CatalogController::class, 'list']);
+
 Router::get('/catalog/single', [CatalogController::class, 'show']);
 
 Router::get('/media/photo', [MediaController::class, 'photo']);

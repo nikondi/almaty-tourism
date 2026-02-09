@@ -10,6 +10,23 @@ class CatalogController extends Controller
             'title' => 'Каталог'
         ]);
     }
+
+    public function map(): string
+    {
+        return $this->render("pages/catalog", [
+            'title' => 'Каталог',
+            'show_type' => 'map',
+        ]);
+    }
+
+    public function list(): string
+    {
+        return $this->render("pages/catalog", [
+            'title' => 'Каталог',
+            'show_type' => 'list',
+        ]);
+    }
+
     public function show(): string
     {
         return $this->render("pages/catalog-single", [

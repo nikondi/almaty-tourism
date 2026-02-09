@@ -15,6 +15,10 @@
     "dev": [
       "Composer\\Config::disableProcessTimeout",
       "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185\" \"php dev.php\" \"npm run dev\" --names=server,vite"
+    ],
+    "build": [
+      "Composer\\Config::disableProcessTimeout",
+      "php build.php"
     ]
   }
 }

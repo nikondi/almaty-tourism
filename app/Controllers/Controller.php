@@ -6,6 +6,8 @@ use App\Facades\Vite;
 
 class Controller
 {
+    protected string $layout = 'layout';
+
     public function __construct()
     {
         Vite::configure(BASE_PATH . '/public/build/.vite/manifest.json', 'localhost:8000/build/', 'http://localhost:5173');
@@ -19,7 +21,7 @@ class Controller
         $content = ob_get_clean();
 
         ob_start();
-        include BASE_PATH . '/resources/views/layout.php';
+        include BASE_PATH . '/resources/views/' . $this->layout . '.php';
         return ob_get_clean();
     }
 

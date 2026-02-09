@@ -1,4 +1,4 @@
-import {aboutPage, requestPage, requestsPage, welcomePage} from "@/pages";
+import {aboutPage, authPage, requestPage, requestsPage, welcomePage} from "@/pages";
 import {initDropdowns, initFancybox, initFilters, initReviews} from "@/components";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -12,4 +12,5 @@ document.addEventListener('DOMContentLoaded', function () {
   requestPage();
   requestsPage();
   aboutPage();
+  authPage();
 });

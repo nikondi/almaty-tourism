@@ -44,7 +44,7 @@ if (!isset($lightHeader))
                         </div>
 
 
-                        <a href="#" class="header-action">
+                        <a href="/login" class="header-action">
                             <img src="/assets/img/icons/<?= $lightHeader ? 'light/' : ''; ?>/user.svg" alt="">
                         </a>
                     </div>

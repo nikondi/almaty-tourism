@@ -244,10 +244,12 @@ body {
 .lang-switcher {
   .dropdown__label {
     column-gap: 8px;
+    line-height: 20px;
     padding: 9px 15px;
     cursor: pointer;
     user-select: none;
     align-items: center;
+    border-color: currentColor;
   }
 }
 
@@ -2494,6 +2496,7 @@ a.tag {
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 60px;
+
     .section-title {
       width: 100%;
     }
@@ -3307,6 +3310,7 @@ a.tag {
   background-color: #FFFFFF;
   border-radius: 8px;
   border: 1px solid #232323;
+  color: #232323;
 
   font-family: $font-secondary;
   font-weight: 400;
@@ -3869,4 +3873,353 @@ a.tag {
   font-family: $font-secondary;
   color: rgba(#ffffff, .8);
   font-size: 14px;
+}
+
+.auth-wrapper {
+  height: 100vh;
+  overflow: auto;
+  padding-top: 64px;
+
+  background: {
+    image: url("/assets/img/auth-background.jpg");
+    repeat: no-repeat;
+    size: cover;
+  };
+  position: relative;
+  color: #FFFFFF;
+
+  &:before {
+    content: '';
+    background-color: rgba(#000000, .5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.auth-logo {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.auth-inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-content {
+  flex: 1;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.auth-form {
+  max-width: 562px;
+  width: 100%;
+  min-height: 475px;
+  border-radius: 8px;
+  background-color: rgba(#ffffff, 0.05);
+  backdrop-filter: blur(35px);
+  padding: 30px 100px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  margin-bottom: 32px;
+}
+
+.auth-form__description {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: rgba(#ffffff, .5);
+  margin-bottom: 24px;
+
+  &--after {
+    margin-top: 24px;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 24px;
+  }
+}
+
+.auth-fieldset {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.auth-field-inner {
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  padding: 8px 20px;
+}
+
+.auth-field {
+  &__error {
+    color: #ff5d5d;
+    margin-top: 7px;
+  }
+
+  &__label {
+    display: block;
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 16px;
+    color: #D9D9D9;
+    cursor: text;
+    user-select: none;
+  }
+
+  &__input {
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    padding: 0;
+  }
+}
+
+.auth-field--dropdown {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    background: {
+      repeat: no-repeat;
+      position: center;
+      image: url("/assets/img/icons/light/chevron-down.svg");
+    }
+    cursor: pointer;
+  }
+
+  select {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  .auth-field__label {
+    cursor: pointer;
+  }
+}
+
+.auth-form-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin-top: 32px;
+}
+
+.password-field {
+  position: relative;
+
+  &__eye {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    padding: 0;
+    background: {
+      color: transparent;
+      image: url("/assets/img/icons/light/eye-closed.svg");
+      repeat: no-repeat;
+      position: center center;
+    };
+    border: none;
+  }
+
+  &__reset {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: -20px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &--with-reset {
+    margin-bottom: 24px;
+  }
+}
+
+.register-btn-checkbox {
+  span {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 19px 16px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    transition: {
+      property: background-color, border-color;
+      duration: .2s;
+    };
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  input:checked + span {
+    background-color: #596BB1;
+    border-color: #596BB1;
+  }
+
+  input:not(:checked) + span:hover {
+    background-color: rgba(#596BB1, .2);
+  }
+}
+
+.auth-form__extlink {
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.register-success__text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+  margin: 32px -30px 80px;
+}
+
+.register-success__icon {
+  text-align: center;
+}
+
+.register-form--contractor {
+  .register-customer-field {
+    display: none;
+  }
+}
+
+.register-form--customer {
+  .register-contractor-field {
+    display: none;
+  }
+}
+
+.register-step:not(.active) {
+  display: none;
+}
+
+.register-form {
+  .auth-form__title {
+    text-align: center;
+  }
+}
+
+.register-step-indicators {
+  display: flex;
+  height: 24px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.register-step-indicator {
+  flex: 1;
+  height: 1px;
+  position: relative;
+  background-color: #FFFFFF;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    transition: .3s width;
+    background-color: #596BB1;
+    top: 0;
+    height: 1px;
+  }
+
+  &:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    z-index: 2;
+    transition: {
+      property: background-color;
+      duration: .2s;
+      delay: .3s;
+    };
+  }
+  &:first-child {
+    flex: 0;
+  }
+
+  &.active {
+    &:after {
+      width: 100%;
+    }
+    &:before {
+      background-color: #596BB1;
+    }
+  }
+  &.active:last-child:before {
+    background-color: #7ABF55;
+  }
 }

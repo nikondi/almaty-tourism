@@ -1,6 +1,7 @@
 <?php
 
 use App\Controllers\AboutController;
+use App\Controllers\AuthController;
 use App\Controllers\CatalogController;
 use App\Controllers\MediaController;
 use App\Controllers\RequestController;
@@ -27,3 +28,10 @@ Router::get('/catalog/single', [CatalogController::class, 'show']);
 
 Router::get('/media/photo', [MediaController::class, 'photo']);
 Router::get('/media/video', [MediaController::class, 'video']);
+
+Router::get('/login', [AuthController::class, 'login']);
+Router::get('/register', [AuthController::class, 'register']);
+Router::get('/register/success', [AuthController::class, 'registerSuccess']);
+Router::get('/recovery', [AuthController::class, 'recovery']);
+Router::get('/recovery/sended', [AuthController::class, 'recoverySended']);
+Router::get('/reset', [AuthController::class, 'reset']);

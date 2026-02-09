@@ -78,6 +78,7 @@ foreach ($routes as $uri => $route) {
     $result = str_replace('</head>', $head_scripts . "\n</head>", $result);
     $result = str_replace(' crossorigin', '', $result);
     $result = str_replace('/assets/', 'assets/', $result);
+    $result = str_replace('\/assets\/', 'assets\/', $result);
     $result = str_replace(array_keys($replace_uris), $replace_uris, $result);
 
     console_print('Output: dist/' . $filename, 'blue');
@@ -242,9 +243,9 @@ function rcopy(string $from, string $to): void
     closedir($dir);
 }
 
-function ask(string $question, string $default = ''): string
+function ask(string $question, string $default = '', $showDefault = true): string
 {
-    printf("%s%s: ", $question, !empty($default) ? " ($default)" : '');
+    printf("%s%s: ", $question, (!empty($default) && $showDefault) ? " ($default)" : '');
 
     $result = fgets(STDIN);
 
@@ -262,7 +263,7 @@ function confirm(string $question, bool $default = true): bool
     );
 
     do {
-        $result = ask("$question $hint", $default ? 'y' : 'n');
+        $result = ask("$question $hint", $default ? 'y' : 'n', false);
     } while (!in_array($result, ['y', 'n', '1', '0']));
 
     return in_array($result, ['y', '1']);

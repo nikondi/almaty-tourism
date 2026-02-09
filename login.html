@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Авторизация</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+
+    <link href="assets/fonts/artifaktelement/stylesheet.css" rel="stylesheet">
+<script type="module" src="assets/js/app-DcHeXCgb.js"></script>
+<link rel="stylesheet" href="assets/css/app-B-JWHobJ.css">
+</head>
+<body>
+
+<div class="auth-wrapper">
+    <div class="auth-inner">
+        <div class="auth-header">
+            <a href="index.html" class="auth-logo">
+                <svg width="176" height="46">
+                    <use xlink:href="assets/img/logo.svg#logo"/>
+                </svg>
+            </a>
+        </div>
+        <div class="auth-content">
+            <div class="auth-form">
+    <div class="auth-form__title">Вход</div>
+    <div class="auth-form__description">Войдите в систему, чтобы управлять своей учетной записью</div>
+
+    <!-- TODO: убрать onsubmit, или переделать на ajax -->
+    <form onsubmit="alert('Отправлено'); return false" id="login-form">
+        <fieldset class="auth-fieldset">
+            <div class="auth-field">
+                <div class="auth-field-inner">
+                    <label class="auth-field__label" for="login">Логин</label>
+                    <input class="auth-field__input" type="text" name="login" id="login" required>
+                </div>
+            </div>
+            <div class="auth-field password-field password-field--with-reset">
+                <div class="auth-field-inner">
+                    <label class="auth-field__label" for="password">Пароль</label>
+                    <input class="auth-field__input" type="password" name="password" id="password" required>
+                    <button type="button" class="password-field__eye"></button>
+                    <a href="recovery.html" type="button" class="password-field__reset">Напомнить пароль</a>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="auth-form-buttons">
+            <button class="btn btn-primary">Войти</button>
+            <a href="register.html" class="btn btn-secondary btn-secondary--white">Регистрация</a>
+        </div>
+    </form>
+</div>        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

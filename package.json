@@ -17,6 +17,7 @@
     "@yandex/ymaps3-default-ui-theme": "^0.0.24",
     "@yandex/ymaps3-types": "^1.0.18650382",
     "axios": "^1.13.4",
+    "imask": "^7.6.1",
     "swiper": "^11.2.8"
   }
 }

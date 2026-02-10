@@ -202,7 +202,7 @@ $capabilities = [
                 <div class="contacts-form-field">
                     <label for="contacts-form-phone" class="contacts-form-field__label">Телефон</label>
                     <input class="contacts-form-field__input" type="tel" name="phone" id="contacts-form-phone"
-                           placeholder="123-456-7890">
+                           placeholder="+7 (123) 456-78-90">
                 </div>
                 <div class="contacts-form-field">
                     <label for="contacts-form-question" class="contacts-form-field__label">Вопрос</label>

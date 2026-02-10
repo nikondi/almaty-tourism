@@ -1,9 +1,16 @@
+<script>
+    // TODO: на нормальную отправку. Нужно для билда
+    function onRecoverySubmit() {
+        window.location.href = "/recovery/sended";
+        return false;
+    }
+</script>
 <div class="auth-form">
     <div class="auth-form__title">Забыли пароль?</div>
     <div class="auth-form__description">Пожалуйста, введите ваш зарегистрированный адрес электронной почты. Мы отправим
         вам ссылку на создание нового пароля
     </div>
-    <form onsubmit="window.location.href = '/recovery/sended'; return false" id="recovery-form">
+    <form onsubmit="return onRecoverySubmit()" id="recovery-form">
         <fieldset class="auth-fieldset">
             <div class="auth-field">
                 <div class="auth-field-inner">

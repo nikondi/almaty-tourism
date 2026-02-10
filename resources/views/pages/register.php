@@ -1,6 +1,13 @@
+<script>
+    // TODO: на нормальную отправку. Нужно для билда
+    function onRegisterSubmit() {
+        window.location.href = "/register/success";
+        return false;
+    }
+</script>
 <div class="auth-form register-form">
     <?php include VIEW_PATH . '/components/register-heading.php'; ?>
-    <form id="register-form" onsubmit="window.location.href= '/register/success'; return false;">
+    <form id="register-form" onsubmit="return onRegisterSubmit()">
         <div class="register-step active">
             <fieldset class="auth-fieldset">
                 <label class="register-btn-checkbox">

@@ -91,7 +91,8 @@ $media = [
     <div class="container">
         <div class="media-gallery-grid">
             <?php foreach ($media as $item): ?>
-                <a href="<?= $item['full'] ?>" class="media-gallery-item" data-fancybox="media">
+                <a href="<?= $item['full'] ?>" class="media-gallery-item" data-fancybox="media"
+                   data-download-src="<?= $item['full'] ?>" data-download-filename="<?= basename($item['full']) ?>">
                     <img src="<?= $item['preview'] ?>" alt=""/>
                 </a>
             <?php endforeach; ?>

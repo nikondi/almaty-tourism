@@ -2701,6 +2701,10 @@ a.tag {
   width: 100%;
   padding-right: 32px;
 
+  .swiper-wrapper {
+    position: static;
+  }
+
   .swiper-slide {
     height: auto;
 
@@ -2777,9 +2781,52 @@ a.tag {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .swiper-pagination {
+    bottom: 16px;
+    left: 16px;
+    width: calc(100% - 32px);
+    top: auto;
+    border: 1px solid #FFFFFF;
+    height: 8px;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  .swiper-pagination-progressbar-fill {
+    background-color: #FFFFFF;
   }
 }
 
+.capabilities-fake-slider {
+  display: none;
+}
+.capabilities-side-slider {
+  width: 50%;
+}
+@media (min-width: 1144px) {
+  .capability-description .capabilities-media-slider {
+    display: none;
+  }
+}
+@media (max-width: 1143px) {
+  .capabilities-side-slider {
+    display: none;
+  }
+  .capabilities-texts {
+    padding-right: 0;
+  }
+  .capability-description .capabilities-media-slider {
+    margin-top: 48px;
+  }
+  .capabilities-text {
+    height: auto;
+  }
+  .capabilities-wrapper {
+    height: auto;
+  }
+}
 
 .contacts-section {
   margin-bottom: 160px;

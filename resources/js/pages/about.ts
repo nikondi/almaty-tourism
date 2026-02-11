@@ -1,8 +1,9 @@
 import "swiper/css";
 import "swiper/css/scrollbar";
+import "swiper/css/pagination";
 
 import Swiper from "swiper";
-import {FreeMode, Mousewheel, Scrollbar, Thumbs} from "swiper/modules";
+import {EffectFade, FreeMode, Mousewheel, Pagination, Scrollbar, Thumbs} from "swiper/modules";
 
 export default function aboutPage() {
   initCapabilities();
@@ -10,13 +11,14 @@ export default function aboutPage() {
 
 function initCapabilities() {
   const wrapper = document.querySelector<HTMLElement>('.capabilities');
-  if(!wrapper)
+  if (!wrapper)
     return;
 
   const thumbsElem = wrapper.querySelector<HTMLElement>('.capabilities-texts');
-  const sliderElem = wrapper.querySelector<HTMLElement>('.capabilities-media-slider');
+  const sideSlider = wrapper.querySelector<HTMLElement>('.capabilities-side-slider');
 
-  const thumbsSlider  = new Swiper(thumbsElem, {
+
+  const thumbsSlider = new Swiper(thumbsElem, {
     modules: [Mousewheel, Scrollbar, FreeMode],
     direction: 'vertical',
     slidesPerView: 'auto',
@@ -35,11 +37,31 @@ function initCapabilities() {
     }
   });
 
-  new Swiper(sliderElem, {
-    modules: [Thumbs],
+
+  new Swiper(sideSlider, {
+    modules: [EffectFade, Thumbs],
+    effect: "fade",
+    noSwiping: true,
+    allowTouchMove: false,
+    fadeEffect: {
+      crossFade: true,
+    },
+    spaceBetween: 100,
     thumbs: {
       swiper: thumbsSlider
     }
   });
+
+  wrapper.querySelectorAll<HTMLElement>('.capabilities-media-slider').forEach(el => {
+    new Swiper(el, {
+      modules: [Pagination],
+      nested: true,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar"
+      },
+    });
+  })
 
 }

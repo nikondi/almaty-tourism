@@ -7,7 +7,7 @@
     ]
 ])); ?>"></div>
 
-<!-- TODO: remove on production -->
+<?php // TODO: Remove on production ?>
 <script type="module">
     import RefreshRuntime from 'http://localhost:5173/@react-refresh'
     RefreshRuntime.injectIntoGlobalHook(window)
@@ -15,6 +15,6 @@
     window.$RefreshSig$ = () => (type) => type
     window.__vite_plugin_react_preamble_installed__ = true
 </script>
-<!-- TODO: remove on production -->
+<?php // TODO: Remove on production ?>
 
 <?= vite("resources/js/react/mice-app/index.tsx") ?>

@@ -29,8 +29,6 @@ function initTels() {
 
 function initMiceFormTriggers() {
   document.querySelectorAll<HTMLElement>('.mice-form-trigger').forEach((el) => {
-    el.addEventListener('click', () => {
-      eventBus.emit('mice-form:open');
-    })
+    el.addEventListener('click', () => eventBus.emit('mice-form:open'))
   })
 }

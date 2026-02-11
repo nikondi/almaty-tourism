@@ -8,7 +8,7 @@ import axios from "axios";
 
 
 export default function Popup() {
-  const [opened, setOpened] = useState(true);
+  const [opened, setOpened] = useState(false);
   const {step, data, appData, setStep} = useMice();
   const stepsRef = useRef<HTMLFormElement>(null);
   const close = () => {
@@ -20,8 +20,8 @@ export default function Popup() {
     setOpened(true);
   }
 
-  useEffect(eventBus.on('mice-form:open', open), []);
-  useEffect(eventBus.on('mice-form:close', close), []);
+  useEffect(() => eventBus.on('mice-form:open', open), []);
+  useEffect(() => eventBus.on('mice-form:close', close), []);
 
   const onSubmit: SubmitEventHandler = (e) => {
     e.preventDefault();

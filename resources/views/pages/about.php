@@ -212,39 +212,58 @@ $capabilities = [
                 </div>
             </div>
         </div>
-        <form method="post" onsubmit="alert('Форма'); return false" class="contacts-form">
-            <div class="contacts-form-row">
-                <div class="contacts-form-field">
-                    <label for="contacts-form-name" class="contacts-form-field__label">Имя</label>
-                    <input class="contacts-form-field__input" type="text" name="name" id="contacts-form-name"
-                           placeholder="Булат">
+        <script>
+            function onSubmitContacts() {
+                document.querySelector('.contacts-form-fields').style.display = 'none';
+                document.querySelector('.contacts-form-success').style.display = null;
+                return false;
+            }
+        </script>
+        <form method="post" onsubmit="return onSubmitContacts()" class="contacts-form">
+            <div class="contacts-form-fields">
+                <div class="contacts-form-row">
+                    <div class="contacts-form-field">
+                        <label for="contacts-form-name" class="contacts-form-field__label">Имя</label>
+                        <input class="contacts-form-field__input" type="text" name="name" id="contacts-form-name"
+                               placeholder="Булат" required>
+                    </div>
+                    <div class="contacts-form-field">
+                        <label for="contacts-form-email" class="contacts-form-field__label">Почта</label>
+                        <input class="contacts-form-field__input" type="email" name="email" id="contacts-form-email"
+                               placeholder="example@mail.com">
+                    </div>
                 </div>
-                <div class="contacts-form-field">
-                    <label for="contacts-form-email" class="contacts-form-field__label">Почта</label>
-                    <input class="contacts-form-field__input" type="email" name="email" id="contacts-form-email"
-                           placeholder="example@mail.com">
+                <div class="contacts-form-row">
+                    <div class="contacts-form-field">
+                        <label for="contacts-form-phone" class="contacts-form-field__label">Телефон</label>
+                        <input class="contacts-form-field__input" type="tel" name="phone" id="contacts-form-phone"
+                               placeholder="+7 (123) 456-78-90" required>
+                    </div>
+                    <div class="contacts-form-field">
+                        <label for="contacts-form-question" class="contacts-form-field__label">Вопрос</label>
+                        <input class="contacts-form-field__input" type="text" name="question"
+                               id="contacts-form-question"
+                               placeholder="Партнерство" required>
+                    </div>
                 </div>
+                <div class="contacts-form-row">
+                    <div class="contacts-form-field">
+                        <label for="contacts-form-message" class="contacts-form-field__label">Сообщение</label>
+                        <textarea class="contacts-form-field__input" type="text" name="message"
+                                  id="contacts-form-message"
+                                  placeholder="Напиши свое сообщение здесь..." required></textarea>
+                    </div>
+                </div>
+                <button type="submit" name="contacts_form" class="btn contacts-form-button">Отправить</button>
             </div>
-            <div class="contacts-form-row">
-                <div class="contacts-form-field">
-                    <label for="contacts-form-phone" class="contacts-form-field__label">Телефон</label>
-                    <input class="contacts-form-field__input" type="tel" name="phone" id="contacts-form-phone"
-                           placeholder="+7 (123) 456-78-90">
-                </div>
-                <div class="contacts-form-field">
-                    <label for="contacts-form-question" class="contacts-form-field__label">Вопрос</label>
-                    <input class="contacts-form-field__input" type="text" name="question" id="contacts-form-question"
-                           placeholder="Партнерство">
-                </div>
+            <div class="contacts-form-success" style="display: none">
+                <svg width="132" height="132" viewBox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M66 11C35.695 11 11 35.695 11 66C11 96.305 35.695 121 66 121C96.305 121 121 96.305 121 66C121 35.695 96.305 11 66 11ZM92.29 53.35L61.105 84.535C60.335 85.305 59.29 85.745 58.19 85.745C57.09 85.745 56.045 85.305 55.275 84.535L39.71 68.97C38.115 67.375 38.115 64.735 39.71 63.14C41.305 61.545 43.945 61.545 45.54 63.14L58.19 75.79L86.46 47.52C88.055 45.925 90.695 45.925 92.29 47.52C93.885 49.115 93.885 51.7 92.29 53.35Z" fill="#7ABF55"/>
+                </svg>
+                <div class="contacts-form-success__title">Ваша форма отправлена</div>
+                <div class="contacts-form-success__text">Ваше сообщение о партнёрстве успешно отправлено. Мы свяжемся с вами
+                    в ближайшее время.</div>
             </div>
-            <div class="contacts-form-row">
-                <div class="contacts-form-field">
-                    <label for="contacts-form-message" class="contacts-form-field__label">Сообщение</label>
-                    <textarea class="contacts-form-field__input" type="text" name="message" id="contacts-form-message"
-                              placeholder="Напиши свое сообщение здесь..."></textarea>
-                </div>
-            </div>
-            <button type="submit" name="contacts_form" class="btn contacts-form-button">Отправить</button>
         </form>
     </div>
 </section>

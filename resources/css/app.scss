@@ -2794,6 +2794,7 @@ a.tag {
     border-radius: 4px;
     background-color: transparent;
   }
+
   .swiper-pagination-progressbar-fill {
     background-color: #FFFFFF;
   }
@@ -2802,14 +2803,17 @@ a.tag {
 .capabilities-fake-slider {
   display: none;
 }
+
 .capabilities-side-slider {
   width: 50%;
 }
+
 @media (min-width: 1144px) {
   .capability-description .capabilities-media-slider {
     display: none;
   }
 }
+
 @media (max-width: 1143px) {
   .capabilities-side-slider {
     display: none;
@@ -2882,6 +2886,9 @@ a.tag {
   padding: 40px;
   border-radius: 8px;
   color: $color-white;
+}
+
+.contacts-form-fields {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -2957,6 +2964,28 @@ a.tag {
   }
 }
 
+.contacts-form-success {
+  padding-top: 110px;
+  height: 496px;
+  text-align: center;
+  color: #FFFFFF;
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    max-width: 390px;
+    margin: 24px auto 0;
+  }
+}
+
 @media (max-width: 1043px) {
   .contacts-wrapper {
     flex-direction: column;
@@ -2967,6 +2996,10 @@ a.tag {
   }
   .contacts-form {
     padding: 24px;
+  }
+  .contacts-form-success {
+    padding-top: 126px;
+    height: 486px;
   }
 }
 
@@ -4090,6 +4123,7 @@ a.tag {
   select {
     appearance: none;
     cursor: pointer;
+    width: calc(100% - 40px);
   }
 
   .auth-field__label {

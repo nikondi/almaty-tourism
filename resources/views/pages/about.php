@@ -213,6 +213,7 @@ $capabilities = [
             </div>
         </div>
         <script>
+            // TODO: на нормальную отправку. Нужно для билда
             function onSubmitContacts() {
                 document.querySelector('.contacts-form-fields').style.display = 'none';
                 document.querySelector('.contacts-form-success').style.display = null;

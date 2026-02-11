@@ -22,6 +22,8 @@
 
 <?php include 'partials/footer.php'; ?>
 
+<?php include 'partials/mice-form.php'; ?>
+
 
 
 <?php // TODO: Remove on production ?>

@@ -6,6 +6,10 @@
   },
   "devDependencies": {
     "@types/node": "^24.0.3",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-input-mask": "^3.0.6",
+    "@vitejs/plugin-react": "^5.1.4",
     "sass": "^1.89.2",
     "typescript": "^5.8.3",
     "vite": "^7.3.1",
@@ -14,10 +18,13 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^6.1.10",
+    "@mona-health/react-input-mask": "^3.0.3",
     "@yandex/ymaps3-default-ui-theme": "^0.0.24",
     "@yandex/ymaps3-types": "^1.0.18650382",
-    "axios": "^1.13.4",
+    "axios": "^1.13.5",
     "imask": "^7.6.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "swiper": "^11.2.8"
   }
 }

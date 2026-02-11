@@ -3,6 +3,7 @@ import {resolve} from 'path';
 import FullReload from 'vite-plugin-full-reload'
 // @ts-ignore
 import hotfilePlugin from "vite-hotfile-plugin";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   server: {
@@ -18,7 +19,8 @@ export default defineConfig({
       publicDirectory: 'public', // relative path to the hot file (default)
       hotFileName: 'hot', // name of the hot file (default)
       logging: false, // console log (default)
-    })
+    }),
+    react()
   ],
   resolve: {
     alias: {

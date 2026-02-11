@@ -16,7 +16,7 @@
                 Найдите площадку, услуги и готовые решения в одном месте
             </div>
             <div class="welcome-first-buttons">
-                <button class="btn btn-primary">Оставить запрос</button>
+                <button class="btn btn-primary mice-form-trigger">Оставить запрос</button>
                 <button class="btn btn-secondary btn-secondary--white">Выставить услугу</button>
             </div>
             <div class="welcome-first-steps">
@@ -207,8 +207,7 @@
                 </div>
             </div>
             <div class="welcome-support-button">
-                <!-- TODO: форма -->
-                <button type="button" class="btn btn-secondary btn-secondary--white">
+                <button type="button" class="btn btn-secondary btn-secondary--white mice-form-trigger">
                     Заполнить заявку
                 </button>
             </div>
